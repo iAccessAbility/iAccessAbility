@@ -1,0 +1,119 @@
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body:before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../img/YT-banner-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: invert();
+    }
+
+    body {
+        background-color: #000;
+    }
+
+    .site {
+        margin-top: 50px;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+        color: #fff;
+    }
+
+    h1,
+    h2,
+    h3 {
+        background-color: #222;
+        margin: 5px auto;
+        padding: 5px;
+        width: 920px;
+        border-radius: 8px;
+    }
+
+    p.site-description {
+        background-color: #222;
+        margin: 10px auto;
+        padding: 5px;
+        width: 920px;
+        border-radius: 8px;
+    }
+
+    div.devices {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div.device {
+        background-color: #222;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 8px;
+        width: 300px;
+        transition: all 200ms ease;
+    }
+
+    @media (hover: hover) {
+        div.device:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 1100px) {
+        body:before {
+            content: '';
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: url(../img/YT-banner-background-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert();
+        }
+    }
+
+    @media (max-width: 768px) {
+        body:before {
+            content: '';
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: url(../img/YT-banner-background-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert();
+        }
+
+        .site {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        p.site-description {
+            width: 70%;
+        }
+
+        div.device {
+            width: 70%;
+        }
+    }
+}

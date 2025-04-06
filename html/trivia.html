@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Leah Dykema">
+        <meta name="description" content="Learn about some fun facts about technology and accessibility in this simple game.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" name="image" content="../img/favicon.png">
+        <meta property="og:title" content="Tech Trivia - iAccessAbility">
+        <meta property="og:description" content="Learn about some fun facts about technology and accessibility in this simple game.">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico?">
+        <link rel="apple-touch-icon" type="image/x-icon" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="../img/favicon.png">
+        <title>Tech Trivia &#45; iAccessAbility</title>
+        <link rel="stylesheet" href="../stylesheets/trivia.css">
+        <link rel="stylesheet" href="../navbar/navbar.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="nav-container" data-role="header" data-position="fixed">
+            <nav>
+                <!-- Top row: menu button on left, logo on right -->
+                <div class="mobile-header">
+                    <!-- iAccessAbility -->
+                    <div class="logo-container">
+                        <a href="/index.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="/index.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                    </div>
+                    <!-- Mobile Menu Toggle Button -->
+                    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+                        <span class="menu-icon-container">
+                            <span class="menu-line"></span>
+                            <span class="menu-line"></span>
+                        </span>
+                    </button>
+                </div>
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><a href="/index.html"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a></li>
+                    <li><a href="/news/index.html">News</a></li>
+                    <li><a href="/html/recommendations.html">Recommendations</a></li>
+                    <li><a href="/html/support-articles.html">Support Articles</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/connect.html">Connect</a></li>
+                </ul>
+                <!-- Mobile Navigation (initially hidden) -->
+                <ul id="mobile-menu" class="mobile-nav" aria-hidden="true">
+                    <li><a href="/index.html" tabindex="-1">Home</a></li>
+                    <li><a href="/news/index.html" tabindex="-1">News</a></li>
+                    <li><a href="/html/recommendations.html" tabindex="-1">Recommendations</a></li>
+                    <li><a href="/html/support-articles.html" tabindex="-1">Support Articles</a></li>
+                    <li><a href="/html/about.html" tabindex="-1">About</a></li>
+                    <li><a href="/html/connect.html" tabindex="-1">Connect</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Trivia Page -->
+        <div class="site">
+            <h1 id="title">Tech &amp; Accessibility Trivia</h1>
+            <div class="container">
+                <div id="quiz-container">
+                    <div id="question-container">
+                        <p id="question"></p>
+                        <ul id="options">
+                            <li class="list-option" onclick="checkAnswer(0)">Option 1</li>
+                            <li class="list-option" onclick="checkAnswer(1)">Option 2</li>
+                            <li class="list-option" onclick="checkAnswer(2)">Option 3</li>
+                            <li class="list-option" onclick="checkAnswer(3)">Option 4</li>
+                        </ul>
+                    </div>
+                    <div id="fun-fact" class="hidden">
+                        <p id="fact"></p>
+                        <br>
+                        <button class="site-button" onclick="nextQuestion()">Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../javascript/trivia.js"></script>
+        <script src="../navbar/navbar.js"></script>
+    </body>
+</html>

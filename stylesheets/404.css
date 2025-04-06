@@ -1,0 +1,69 @@
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+        margin-top: 44px;
+        margin-left: 20em;
+        margin-right: 20em;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    a.link {
+        color: #8bc3ff;
+        text-decoration: none;
+        transition: 200ms ease all;
+    }
+
+    @media (hover: hover) {
+        a.link:hover,
+        a.link:focus,
+        a.link:active {
+            color: #0063cc;
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+    }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #000;
+        margin-top: 44px;
+        margin-left: 20em;
+        margin-right: 20em;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    a.link {
+        color: #0000ff;
+        text-decoration: none;
+        transition: 200ms ease all;
+    }
+
+    @media (hover: hover) {
+        a.link:hover,
+        a.link:focus,
+        a.link:active {
+            color: #0063cc;
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+    }
+}
