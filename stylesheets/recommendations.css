@@ -28,6 +28,8 @@
 
     div.card-group {
         display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -157,6 +159,8 @@
 
     div.card-group {
         display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
         flex-wrap: wrap;
         justify-content: center;
     }
