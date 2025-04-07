@@ -140,18 +140,18 @@ nav .desktop-nav li a {
 }
 
 .menu-line {
-    height: 1px;
-    width: 30px;
+    height: 2px !important;
+    width: 30px !important;
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
 
 .menu-toggle[aria-expanded="true"] .menu-line:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
+    transform: rotate(45deg) translateY(7px);
 }
 
 .menu-toggle[aria-expanded="true"] .menu-line:nth-child(2) {
-    transform: rotate(-46deg) translateY(-8px);
+    transform: rotate(-46deg) translateY(-7px);
 }
 
 .mobile-nav {
