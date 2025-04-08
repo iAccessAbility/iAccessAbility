@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.91027,-0.000939946,0.000924796,0.895599,13.4786,28.5137)">
+        <rect x="274.443" y="97.381" width="226.221" height="196.857"/>
+    </g>
+    <g transform="matrix(0.907358,0,0,0.892734,-206.509,29.0989)">
+        <rect x="274.443" y="97.381" width="226.221" height="196.857"/>
+    </g>
+    <g transform="matrix(0.845321,-0.00271617,0.00243301,0.757194,169.84,-237.499)">
+        <g transform="matrix(302.901,0,0,302.901,72.4657,692.812)">
+        </g>
+        <text x="-134.891px" y="692.812px" style="font-family:'Tahoma-Bold', 'Tahoma', sans-serif;font-weight:700;font-size:302.901px;fill:white;">A</text>
+    </g>
+    <g transform="matrix(0.845321,-0.00271617,0.00243301,0.757194,392.685,-238.215)">
+        <g transform="matrix(302.901,0,0,302.901,69.5077,692.812)">
+        </g>
+        <text x="-134.891px" y="692.812px" style="font-family:'Tahoma-Bold', 'Tahoma', sans-serif;font-weight:700;font-size:302.901px;fill:white;">V</text>
+    </g>
+    <g transform="matrix(0.760025,0,0,0.687217,25.1959,89.0362)">
+        <g transform="matrix(130.14,0,0,130.14,586.676,421.576)">
+        </g>
+        <text x="23.161px" y="421.576px" style="font-family:'Tahoma-Bold', 'Tahoma', sans-serif;font-weight:700;font-size:130.14px;">AppleVis</text>
+    </g>
+</svg>
