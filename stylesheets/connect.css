@@ -1,6 +1,6 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-    body:before {
+    .site:before {
         content: '';
         display: block;
         position: fixed;
@@ -19,8 +19,6 @@
         background-color: #000000;
         color: #ffffff;
         font-style: none;
-        margin-top: 150px;
-        margin-bottom: 100px;
     }
 
     .site {
@@ -29,13 +27,21 @@
     }
 
     h1 {
-        padding: 30px;
+        padding-top: 30px;
         text-align: center;
         font-size: 70px;
     }
 
-    a {
-        font-size: 45px;
+    h3 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 30px;
+    }
+
+    .divider {
+        margin: 20px auto;
+        width: 400px;
     }
 
     .leahdykema {
@@ -49,38 +55,102 @@
         backdrop-filter: blur(5px);
     }
 
-    .link-icons {
-        width: 300px;
-        margin: 0 auto;
-        list-style: none;
-    }
-
     .connect-list {
         display: flex;
+        margin: auto;
+        max-width: 300px;
         align-items: center;
         justify-content: space-between;
         list-style: none;
     }
 
     .social-list {
+        display: block;
+        margin: auto;
+        max-width: 500px;
+        align-items: center;
+        list-style: none;
+    }
+
+    .support-list {
         display: flex;
+        margin: auto;
+        max-width: 300px;
         align-items: center;
         justify-content: space-between;
         list-style: none;
     }
 
     .Icon {
-        display: block;
-        border-radius: 15px;
-        background-position: center;
-        background-repeat: no-repeat;
+        border-radius: 10px;
+        background-color: #ddd;
         margin: 15% auto;
+        padding: 6px;
         height: 60px;
         filter: invert();
+        transition: all 200ms ease;
+    }
+
+    .list-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        border-radius: 10px;
+        background-color: #222;
+        position: relative;
+        height: 70px;
+        transition: all 300ms ease;
+    }
+
+    .list-item a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+    }
+
+    .list-item a img {
+        position: absolute;
+        background: none;
+        left: 10px;
+    }
+
+    .list-item a h2 {
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    @media (hover: hover) {
+        .leahdykema:hover,
+        .leahdykema:focus {
+            content: url(../img/assets/link.svg);
+            filter: invert();
+            backdrop-filter: invert() blur(5px);
+        }
+
+        a:hover,
+        a:focus {
+            color: #8bc3ff;
+        }
+
+        .list-item:hover,
+        .Icon:hover,
+        .list-item:focus,
+        .Icon:focus {
+            scale: 1.1;
+        }
     }
 
     @media (max-width: 1100px) {
-        body:before {
+        .site:before {
             content: '';
             display: block;
             position: fixed;
@@ -95,42 +165,31 @@
             filter: invert();
         }
 
-        body {
+        .site {
             margin-top: 260px;
         }
 
         h1 {
-            padding: 20px;
+            padding-top: 20px;
             text-align: center;
             font-size: 50px;
         }
 
         .leahdykema {
             display: block;
-            margin: 0 auto;
             align-items: center;
             border-radius: 300px;
             height: 170px;
             color: rgb(0, 0, 0, 0.2);
             backdrop-filter: blur(8px);
         }
-
-        .link-icons {
-            width: 200px;
-            margin: 0 auto;
-            list-style: none;
-        }
     }
 
     @media (max-width: 768px) {
-        body:before {
+        .site:before {
             content: '';
             display: block;
             position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
             z-index: -1;
             background-image: url(../img/YT-banner-background-mobile.svg);
             background-repeat: no-repeat;
@@ -138,39 +197,50 @@
             filter: invert();
         }
 
-        body {
-            margin-top: 120px;
-            margin-left: 30px;
-            margin-right: 30px;
+        .site {
+            margin-top: 150px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 100px;
+        }
+
+        .support-list {
+            margin: 0 70px;
+        }
+
+        .list-item {
+            margin: 10px 0;
         }
 
         h1 {
-            padding: 20px;
+            padding-top: 20px;
             text-align: center;
             font-size: 30px;
         }
 
+        h3 {
+            font-size: 20px;
+        }
+
+        .divider {
+            margin: 10px auto;
+            width: 100px;
+        }
+
         .leahdykema {
             display: block;
-            margin: 0 auto;
             align-items: center;
             border-radius: 300px;
             height: 190px;
             color: rgb(0, 0, 0, 0.2);
             backdrop-filter: blur(4px);
         }
-
-        .link-icons {
-            width: 250px;
-            margin: 0 auto;
-            list-style: none;
-        }
     }
 }
 
 /* Light theme */
 @media (prefers-color-scheme: light) {
-    body:before {
+    .site:before {
         content: '';
         display: block;
         position: fixed;
@@ -179,19 +249,15 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-        background-color: #fff;
         background-image: url(../img/YT-banner-background-desktop.svg);
         background-repeat: no-repeat;
         background-size: cover;
-        filter: none;
     }
 
     body {
         background-color: #fff;
         color: #000;
         font-style: none;
-        margin-top: 150px;
-        margin-bottom: 100px;
     }
 
     .site {
@@ -200,13 +266,21 @@
     }
 
     h1 {
-        padding: 30px;
+        padding-top: 30px;
         text-align: center;
         font-size: 70px;
     }
 
-    a {
-        font-size: 45px;
+    h3 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 30px;
+    }
+
+    .divider {
+        margin: 20px auto;
+        width: 400px;
     }
 
     .leahdykema {
@@ -216,39 +290,102 @@
         border-radius: 300px;
         height: 290px;
         border: 25px solid;
-        color: rgb(0, 0, 0, 0.1);
+        color: rgb(0, 0, 0, 0.2);
         backdrop-filter: blur(5px);
-    }
-
-    .link-icons {
-        width: 300px;
-        margin: 0 auto;
-        list-style: none;
     }
 
     .connect-list {
         display: flex;
+        margin: auto;
+        max-width: 300px;
         align-items: center;
         justify-content: space-between;
         list-style: none;
     }
 
     .social-list {
+        display: block;
+        margin: auto;
+        max-width: 500px;
+        align-items: center;
+        list-style: none;
+    }
+
+    .support-list {
         display: flex;
+        margin: auto;
+        max-width: 300px;
         align-items: center;
         justify-content: space-between;
         list-style: none;
     }
 
     .Icon {
-        display: block;
+        border-radius: 10px;
+        background-color: #ddd;
         margin: 15% auto;
+        padding: 6px;
         height: 60px;
-        filter: none;
+        transition: all 200ms ease;
+    }
+
+    .list-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        border-radius: 10px;
+        background-color: #ddd;
+        height: 70px;
+        transition: all 300ms ease;
+    }
+
+    .list-item a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+    }
+
+    .list-item a img {
+        position: absolute;
+        background: none;
+        left: 10px;
+    }
+
+    .list-item a h2 {
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    a {
+        color: #000;
+    }
+
+    @media (hover: hover) {
+        .leahdykema:hover,
+        .leahdykema:focus {
+            content: url(../img/assets/link.svg);
+        }
+
+        a:hover,
+        a:focus {
+            color: #8bc3ff;
+        }
+
+        .list-item:hover,
+        .Icon:hover,
+        .list-item:focus,
+        .Icon:focus {
+            scale: 1.1;
+        }
     }
 
     @media (max-width: 1100px) {
-        body:before {
+        .site:before {
             content: '';
             display: block;
             position: fixed;
@@ -257,96 +394,79 @@
             top: 0;
             bottom: 0;
             z-index: -1;
-            background-color: #fff;
             background-image: url(../img/YT-banner-background-desktop.svg);
             background-repeat: no-repeat;
             background-size: cover;
-            filter: none;
         }
 
-        body {
+        .site {
             margin-top: 260px;
         }
 
         h1 {
-            padding: 20px;
+            padding-top: 20px;
             text-align: center;
             font-size: 50px;
         }
 
         .leahdykema {
             display: block;
-            margin: 0 auto;
             align-items: center;
             border-radius: 300px;
             height: 170px;
             color: rgb(0, 0, 0, 0.2);
             backdrop-filter: blur(8px);
         }
-
-        .link-icons {
-            width: 200px;
-            margin: 0 auto;
-            list-style: none;
-        }
     }
 
     @media (max-width: 768px) {
-        body:before {
+        .site:before {
             content: '';
             display: block;
             position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
             z-index: -1;
-            background-color: #fff;
             background-image: url(../img/YT-banner-background-mobile.svg);
             background-repeat: no-repeat;
             background-size: cover;
-            filter: none;
         }
 
-        body {
-            margin-top: 120px;
-            margin-left: 30px;
-            margin-right: 30px;
+        .site {
+            margin-top: 150px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 100px;
+        }
+
+        .support-list {
+            margin: 0 70px;
+        }
+
+        .list-item {
+            margin: 10px 0;
         }
 
         h1 {
-            padding: 20px;
+            padding-top: 20px;
             text-align: center;
             font-size: 30px;
         }
 
+        h3 {
+            font-size: 20px;
+        }
+
+        .divider {
+            margin: 10px auto;
+            width: 100px;
+        }
+
         .leahdykema {
             display: block;
-            margin: 0 auto;
             align-items: center;
             border-radius: 300px;
             height: 190px;
             color: rgb(0, 0, 0, 0.2);
             backdrop-filter: blur(4px);
-        }
-
-        .link-icons {
-            width: 250px;
-            margin: 0 auto;
-            list-style: none;
-        }
-    }
-}
-
-/* High Contrast */
-@media (prefers-contrast: more) {
-    img.Icon {
-        background-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        img.Icon {
-            background-color: #fff;
         }
     }
 }
