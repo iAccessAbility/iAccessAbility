@@ -283,3 +283,9 @@ li a:focus {
         display: none;
     }
 }
+
+@media (prefers-contrast: more) {
+    .link-logo {
+        text-decoration: none !important;
+    }
+}

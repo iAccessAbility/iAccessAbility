@@ -1,5 +1,9 @@
 @import "fonts.css";
-/* Apply to all widths and both light and dark mode */
+/* Apply to all both light and dark mode */
+html {
+    scroll-behavior: smooth;
+}
+
 img.example-images.instruction-screenshot {
     display: none;
 }
@@ -20,6 +24,11 @@ img.example-images.instruction-screenshot.active {
 .img-and-text {
     width: 100%;
     justify-content: space-between;
+}
+
+.highlighted {
+    color: #8bc3ff;
+    transition: color 0.5s, text-decoration 0.5s;
 }
 
 @keyframes fadeIn {
