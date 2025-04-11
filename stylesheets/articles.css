@@ -4,6 +4,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body .site {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    justify-content: center;
+    max-width: 1000px;
+}
+
 img.example-images.instruction-screenshot {
     display: none;
 }
@@ -31,6 +39,34 @@ img.example-images.instruction-screenshot.active {
     transition: color 0.5s, text-decoration 0.5s;
 }
 
+@media (hover: hover) {
+    table {
+        padding: 20px;
+    }
+
+    table tr th,
+    table tr td {
+        transition: all 200ms, transform 200ms ease-in-out, background-color 400ms ease;
+        will-change: transform;
+    }
+
+    table tr th:hover,
+    table tr th:focus,
+    table tr td:hover,
+    table tr td:focus {
+        transform: scale(1.1);
+        z-index: 10;
+        position: relative;
+        transition: transform 200ms ease-in-out, background-color 400ms ease;
+    }
+
+    @media (max-width: 768px) {
+        table {
+            padding: 4px;
+        }
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -43,7 +79,7 @@ img.example-images.instruction-screenshot.active {
 
 /* Media Queries */
 @media (max-width: 1100px) {
-    .site {
+    body .site {
         margin-left: 8em;
         margin-right: 8em;
     }
@@ -156,7 +192,7 @@ img.example-images.instruction-screenshot.active {
 }
 
 @media (max-width: 768px) {
-    .site {
+    body .site {
         margin-left: 2em;
         margin-right: 2em;
     }
@@ -276,7 +312,7 @@ img.example-images.instruction-screenshot.active {
         background-color: #000;
     }
 
-    .site {
+    body .site {
         cursor: default;
         font-family: "Oswald";
         font-weight: 300;
@@ -381,6 +417,43 @@ img.example-images.instruction-screenshot.active {
         display: block;
     }
 
+    table {
+        margin: auto;
+        margin-bottom: 20px;
+        border-spacing: 7px;
+        width: 100%;
+        font-family: arial;
+        font-size: 20px;
+    }
+
+    th {
+        background-color: #222;
+        padding: 10px;
+        border-radius: 15px;
+        width: 50px;
+        max-width: 100px;
+        transition: background-color 400ms ease;
+    }
+
+    td {
+        background-color: #222;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100px;
+        transition: background-color 400ms ease;
+    }
+
+    @media (hover: hover) {
+        th:hover,
+        th:focus,
+        td:hover,
+        td:focus {
+            transform: scale(1.1);
+            background-color: #333;
+            transition: background-color 400ms ease;
+        }
+    }
+
     div.disclaimer-section {
         margin: 0 auto;
         width: 100%;
@@ -467,7 +540,7 @@ img.example-images.instruction-screenshot.active {
 
     /* Media Queries */
     @media (max-width: 1100px) {
-        .site {
+        body .site {
             margin-left: 8em;
             margin-right: 8em;
         }
@@ -555,7 +628,7 @@ img.example-images.instruction-screenshot.active {
     }
 
     @media (max-width: 768px) {
-        .site {
+        body .site {
             margin-left: 2em;
             margin-right: 2em;
         }
@@ -596,6 +669,11 @@ img.example-images.instruction-screenshot.active {
 
         hr {
             width: 90%;
+        }
+
+        table {
+            font-size: 18px;
+            border-spacing: 5px;
         }
 
         ol.instructions-list {
@@ -676,7 +754,7 @@ img.example-images.instruction-screenshot.active {
         background-color: #fff;
     }
 
-    .site {
+    body .site {
         cursor: default;
         font-family: "Oswald";
         font-weight: 300;
@@ -781,6 +859,42 @@ img.example-images.instruction-screenshot.active {
         display: block;
     }
 
+    table {
+        margin: auto;
+        margin-bottom: 20px;
+        border-spacing: 7px;
+        width: 100%;
+        font-family: arial;
+        font-size: 20px;
+    }
+
+    th {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 15px;
+        width: 50px;
+        max-width: 100px;
+        transition: background-color 400ms ease;
+    }
+
+    td {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100px;
+        transition: background-color 400ms ease;
+    }
+
+    @media (hover: hover) {
+        th:hover,
+        th:focus,
+        td:hover,
+        td:focus {
+            background-color: #ddd;
+            transition: background-color 400ms ease;
+        }
+    }
+
     div.disclaimer-section {
         margin: 0 auto;
         width: 100%;
@@ -866,7 +980,7 @@ img.example-images.instruction-screenshot.active {
 
     /* Media Queries */
     @media (max-width: 1100px) {
-        .site {
+        body .site {
             margin-left: 8em;
             margin-right: 8em;
         }
@@ -954,7 +1068,7 @@ img.example-images.instruction-screenshot.active {
     }
 
     @media (max-width: 768px) {
-        .site {
+        body .site {
             margin-left: 2em;
             margin-right: 2em;
         }
@@ -995,6 +1109,11 @@ img.example-images.instruction-screenshot.active {
 
         hr {
             width: 90%;
+        }
+
+        table {
+            font-size: 18px;
+            border-spacing: 5px;
         }
 
         ol.instructions-list {
