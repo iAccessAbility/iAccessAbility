@@ -25,6 +25,10 @@
         font-size: 20px;
     }
 
+    iframe {
+        border: none;
+    }
+
     .description {
         margin-bottom: 20px;
         font-size: 1.1rem;
@@ -227,6 +231,10 @@
 
     p {
         font-size: 20px;
+    }
+
+    iframe {
+        border: none;
     }
 
     .description {

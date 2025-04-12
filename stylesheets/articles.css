@@ -670,12 +670,12 @@ img.example-images.instruction-screenshot.active {
         }
 
         ol.instructions-list {
-            margin-left: 30px;
+            margin-left: 40px;
             list-style: decimal;
         }
 
         ul.instructions-list {
-            margin-left: 30px;
+            margin-left: 40px;
             list-style: outside;
         }
 
@@ -1016,7 +1016,7 @@ img.example-images.instruction-screenshot.active {
         }
 
         ul.instructions-list {
-            margin-left: 20px;
+            margin-left: 30px;
             list-style: outside;
         }
 
@@ -1111,12 +1111,12 @@ img.example-images.instruction-screenshot.active {
         }
 
         ol.instructions-list {
-            margin-left: 30px;
+            margin-left: 40px;
             list-style: decimal;
         }
 
         ul.instructions-list {
-            margin-left: 30px;
+            margin-left: 40px;
             list-style: outside;
         }
 
