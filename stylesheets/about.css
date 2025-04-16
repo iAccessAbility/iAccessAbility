@@ -1,280 +1,189 @@
-/* Dark theme */
+:root {
+    --bg-light: #fff;
+    --text-light: #111111;
+    --bg-dark: #000;
+    --text-dark: #f2f2f2;
+    --primary: #007aff;
+    --alt-bg: #8bc3ff33;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #000000;
-        font-family: sans-serif;
-        color: #ffffff;
-        cursor: default;
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
     }
 
-    .site {
-        margin: auto;
-        margin-top: 44px;
-        max-width: 1000px;
-    }
-
-    h1 {
+    .site:before {
+        content: '';
         display: block;
-        text-align: center;
-        font-size: 6em;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    p {
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 1.6;
-        margin: 1.5em 0;
-    }
-
-    .drop-cap {
-        float: left;
-        font-size: 2.9em;
-        padding-right: 12px;
-        font-weight: bold;
-    }
-
-    a {
-        color: #8bc3ff;
-        text-decoration: none;
-        transition: all 0.5s;
-    }
-
-    a:hover,
-    a:focus {
-        transform: scale(0.5); color: #007bff;
-    }
-
-    .header {
-        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../img/YT-banner-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
         filter: invert();
     }
-
-    .leah-in-chinese-dress {
-        display: block;
-        margin: 0 auto;
-        align-items: center;
-        height: 600px;
-        border-radius: 29px;
-    }
-
-    .leah-collection {
-        display: block;
-        margin: 0 auto;
-        align-items: center;
-        height: 500px;
-        border-radius: 29px;
-    }
-
-    /* Media Queries */
-    @media (max-width: 1100px) {
-        h1, p {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        .leah-in-chinese-dress {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: 500px;
-        }
-
-        .leah-collection {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: 300px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 60px;
-            margin-bottom: 0.4em;
-        }
-
-        h1 {
-            display: none;
-        }
-
-        p {
-            font-size: 25px;
-        }
-
-        .header {
-            display: block;
-            margin-top: 44px;
-        }
-
-        .leah-in-chinese-dress {
-            display: none;
-            margin: 0 auto;
-            align-items: center;
-            height: 300px;
-        }
-
-        .leah-collection {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: auto;
-            width: 80%;
-            border-radius: 15px;
-        }
-    }
 }
 
-/* Light theme */
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #fff;
-        font-family: sans-serif;
-        color: #000;
-        cursor: default;
-        margin: 0 30px;
+        background-color: var(--bg-light);
+        color: var(--text-light);
     }
 
-    .site {
-        margin: auto;
-        margin-top: 44px;
-        max-width: 1000px;
-    }
-
-    h1 {
+    .site:before {
+        content: '';
         display: block;
-        text-align: center;
-        font-size: 6em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../img/YT-banner-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    p {
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 1.6;
-        margin: 1.5em 0;
-    }
-
-    .drop-cap {
-        float: left;
-        font-size: 2.9em;
-        padding-right: 12px;
-        font-weight: bold;
-    }
-
-    a {
-        color: #8bc3ff;
-        text-decoration: none;
-        transition: all 0.5s;
-    }
-
-    a:hover,
-    a:focus {
-        transform: scale(0.5); color: #007bff;
-    }
-
-    .header {
-        display: none;
-    }
-
-    .leah-in-chinese-dress {
-        display: block;
-        margin: 0 auto;
-        align-items: center;
-        height: 600px;
-        border-radius: 29px;
-    }
-
-    .leah-collection {
-        display: block;
-        margin: 0 auto;
-        align-items: center;
-        height: auto;
-        width: 80%;
-        border-radius: 29px;
-    }
-
-    /* Media Queries */
-    @media (max-width: 1100px) {
-        h1, p {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        .leah-in-chinese-dress {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: 500px;
-        }
-
-        .leah-collection {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: 300px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 60px;
-            margin-bottom: 0.4em;
-        }
-
-        p {
-            font-size: 25px;
-        }
-
-        h1 {
-            display: none;
-        }
-
-        .header {
-            display: block;
-            margin-top: 44px;
-        }
-
-        .leah-in-chinese-dress {
-            display: none;
-            margin: 0 auto;
-            align-items: center;
-            height: 300px;
-        }
-
-        .leah-collection {
-            display: block;
-            margin: 0 auto;
-            align-items: center;
-            height: 130px;
-            border-radius: 15px;
-        }
+    .logo {
+        filter: invert();
     }
 }
 
-/* High Contrasts */
-@media (prefers-contrast: more) {
-    * {
-        font-weight: bold;
-        color: #000;
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.site {
+    margin-top: 3em;
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+}
+
+.section {
+    display: flex;
+    background-color: var(--alt-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 200ms ease;
+}
+
+.section-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 200ms ease;
+}
+
+.section.reverse,
+.section-2.reverse {
+    flex-direction: row-reverse;
+}
+
+.text {
+    flex: 1 1 300px;
+}
+
+.image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 0.75rem;
+    transition: all 200ms ease;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+a {
+    color: #8bc3ff;
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+
+@media (hover: hover) {
+    .image img:hover {
+        transform: scale(1.1);
     }
 
-    a {
-        color: #0000ff;
-        text-decoration: underline;
+    a:hover {
+        color: #0063cc;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
     }
 
-    @media (prefers-color-scheme: dark) {
-        * {
-            font-weight: bold;
-            color: #fff;
-        }
+    h2 {
+        font-size: 30px;
+    }
 
-        a {
-            color: #8bc3ff;
-            text-decoration: underline;
-        }
+    .section,
+    .section-2 {
+        flex-direction: column;
+    }
+
+    .section.reverse,
+    .section-2.reverse {
+        flex-direction: column;
+    }
+
+    .section.with-background::before {
+        background-image: none;
+        transition: filter 0.3s ease;
+    }
+
+    .site:before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../img/YT-banner-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
