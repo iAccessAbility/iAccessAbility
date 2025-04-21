@@ -9,9 +9,9 @@
         font-weight: 300;
         color: #fff;
         overflow: scroll;
+        margin: auto;
         margin-bottom: 44px;
-        margin-left: 15em;
-        margin-right: 15em;
+        max-width: 1000px;
     }
 
     h1 {
@@ -175,9 +175,9 @@
         font-weight: 300;
         color: #000;
         overflow: scroll;
+        margin: auto;
         margin-bottom: 44px;
-        margin-left: 15em;
-        margin-right: 15em;
+        max-width: 1000px;
     }
 
     h1 {
