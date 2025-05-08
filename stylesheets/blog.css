@@ -1,0 +1,162 @@
+.site {
+    margin-top: 44px;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.blog-post {
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 5px #8bc3ff solid;
+}
+
+.blog-title {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.blog-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area {
+    position: relative;
+    font-size: 1.1em;
+    line-height: 1.6;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image-area img {
+    margin: 10px auto;
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+h1 {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 3em;
+}
+
+section {
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(to right, #8bc3ff22 0%, transparent 100%);
+    border-radius: 8px;
+}
+
+footer {
+    background: linear-gradient(to right, #8bc3ff22 0%, transparent 100%);
+    margin: 20px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+footer.date {
+    margin: 0;
+    margin-top: 6px;
+    padding: 0;
+    font-size: 0.7em;
+    text-align: right;
+    opacity: 0.5;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .blog-inner {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .text-area {
+        order: 1;
+    }
+
+    .image-area {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .site {
+        font-size: 18px;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 2em;
+    }
+
+    h2.blog-title {
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+
+    section {
+        background: none;
+        padding: 20px;
+    }
+
+    footer {
+        background: none;
+    }
+
+    .blog-post {
+        border-left: none;
+    }
+
+    .image-area img {
+        width: 100%;
+    }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    section,
+    footer {
+        background-color: #222;
+    }
+
+    a {
+        color: #8bc3ff;
+        transition: all 200ms ease;
+    }
+
+    a:hover {
+        color: #0063cc;
+    }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    section,
+    footer {
+        background-color: #eee;
+    }
+
+    a {
+        color: #0066cc;
+        transition: all 200ms ease;
+    }
+
+    a:hover {
+        color: #0011cc;
+    }
+}
