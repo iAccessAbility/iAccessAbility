@@ -11,7 +11,7 @@
 }
 
 .blog-title {
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
 }
 
@@ -22,7 +22,7 @@
 
 .text-area {
     position: relative;
-    font-size: 1.1em;
+    font-size: 1.5em;
     line-height: 1.6;
     z-index: 1;
     overflow: hidden;
@@ -41,7 +41,7 @@
 h1 {
     margin-top: 60px;
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 section {
@@ -96,7 +96,11 @@ footer.date {
 
     h2.blog-title {
         margin-bottom: 5px;
-        font-size: 30px;
+        font-size: 1.5em;
+    }
+
+    .text-area {
+        font-size: 1.1em;
     }
 
     section {
