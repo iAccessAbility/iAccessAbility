@@ -156,9 +156,8 @@
                 transition: all 400ms ease;
             }
 
-            .link-logo:hover,
-            .link-logo:focus {
-                scale: 1.3;
+            .logo-dino {
+                transition: all 400ms ease;
             }
 
             a {
@@ -166,9 +165,46 @@
                 transition: all 400ms ease;
             }
 
-            a:hover,
-            a:focus {
-                color: #8bc3ff;
+            #return-home-container {
+                transition: transform 0.6s ease, opacity 0.6s ease;
+            }
+
+            #return-home-link {
+                transition: transform 0.5s ease, margin-top 0.5s ease;
+            }
+
+            #delayed-paragraph-container {
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.6s ease, opacity 0.6s ease;
+            }
+
+            #delayed-paragraph-container.expanded {
+                max-height: 200px;
+                opacity: 1;
+            }
+
+            #delayed-paragraph-container h3 {
+                margin: 0;
+                margin-bottom: 20px;
+                padding: 0.5em 0;
+                font-weight: 300;
+                color: #999;
+            }
+
+            @media (hover: hover) {
+                .logo-dino:hover,
+                .logo-dino:focus,
+                .link-logo:hover,
+                .link-logo:focus {
+                    scale: 1.3;
+                }
+
+                a:hover,
+                a:focus {
+                    color: #8bc3ff;
+                }
             }
 
             /* Dark theme */
@@ -398,15 +434,28 @@
             </nav>
         </div>
         <!-- 404 error Page -->
-        <div class="site">
-            <a href="/html/dino.html" aria-label="Do you dare visit the dino?"><img src="/img/logo-sad.svg" aria-hidden="true" height="200" alt=""></a>
+        <main class="site">
+            <a href="/html/dino.html" aria-label="Do you dare visit the dino?"><img class="logo-dino" src="/img/logo-sad.svg" aria-hidden="true" height="200" alt=""></a>
             <h1>Oops&#33; This page failed to follow ADA compliance... now it&#39;s getting sued &#58;P</h1>
             <br>
-            <h3>Looks like you&#39;ve hit a dead link&#33; Double&#45;check the URL&#44; or if you think something&#39;s broken&#44; let us know at <a class="link" href="mailto:support@iaccessabilityservices.com">support&#64;iAccessAbilityServices&#46;com</a> so we can fix it&#46;</h3>
+            <h3>Looks there&#39;s an issue with this link&#33; Double&#45;check the URL&#44; or if you think something&#39;s broken&#44; let us know at <a class="link" href="mailto:report@iaccessabilityservices.com?subject=Report%20an%20Issue%20on%20the%20iAccessAbility%20Website&body=Hello iAccessAbility,%0D%0A%0D%0AI%20found%20a%20broken%20link,%20image,%20or%20format%20issue%20on%20the%20iAccessAbility%20website.%0D%0A%0D%0AProblem:%20(Please%20tell%20us%20what%20kind%20of%20issue%20needs%20to%20addressed%20[Broken%20Redirect%20Link,%20Broken%20Image%20Link,%20Broken%20Page.])%0D%0A%0D%0ALocation:%20(Please%20provide%20a%20link%20to%20the%20page%20that%20needs%20to%20be%20looked%20at.)%0D%0A%0D%0ADetails:%20(Please%20provide%20as%20many%20details%20about%20the%20issue%20you%20are%20facing%20and%20how%20we%20can%20reproduce%20it%20to%20resolve%20the%20problem.)">report&#64;iAccessAbilityServices&#46;com</a> so we can fix it&#46;</h3>
             <br>
-            <h3><a class="link" href="/index.html">Pretend this never happened &#40;Return Home&#41;</a></h3>
-        </div>
+            <!-- Delayed hint -->
+            <div id="delayed-paragraph-container"></div>
+            <div id="return-home-container"><h3><a class="link" href="/index.html">Pretend this never happened &#40;Return Home&#41;</a></h3></div>
+        </main>
         <script src="navbar/navbar.js"></script>
         <script src="javascript/redirects.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const container = document.getElementById('delayed-paragraph-container');
+                    const paragraph = document.createElement('h3');
+                    paragraph.innerHTML = `Ever heard the phrase <em>hidden in plain sight</em>? Let’s just say the logo might be more than just a funny easter egg graphic…`;
+                    container.appendChild(paragraph);
+                    container.classList.add('expanded');
+                }, 5000);
+            });
+        </script>
     </body>
 </html>
