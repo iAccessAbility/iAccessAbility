@@ -1,5 +1,9 @@
 @import "fonts.css";
 
+*:focus {
+    outline: 2px solid #8bc3ff !important;
+}
+
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     body {

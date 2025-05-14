@@ -1,4 +1,9 @@
 @import "fonts.css";
+
+*:focus {
+    outline: 2px solid #8bc3ff !important;
+}
+
 /* Apply to all both light and dark mode */
 html {
     scroll-behavior: smooth;
@@ -157,13 +162,13 @@ img.example-images.instruction-screenshot.active {
     img.example-images {
         justify-content: flex-end;
         padding-top: 30px;
-        height: 300px;
+        max-height: 300px;
     }
 
     img.example-images.invert {
         margin: auto;
         padding-top: 30px;
-        height: 300px;
+        max-height: 300px;
     }
 
     .iphone {
@@ -272,13 +277,13 @@ img.example-images.instruction-screenshot.active {
     img.example-images {
         margin: auto;
         padding-top: 20px;
-        height: 250px;
+        max-height: 250px;
     }
 
     img.example-images.invert {
         margin: auto;
         padding-top: 20px;
-        height: 250px;
+        max-height: 250px;
     }
 
     .iphone {
@@ -466,14 +471,14 @@ img.example-images.instruction-screenshot.active {
 
     img.example-images {
         display: block;
-        height: 300px;
+        max-height: 300px;
         margin-left: 50px;
         align-items: left;
     }
 
     img.example-images.invert {
         display: block;
-        height: 300px;
+        max-height: 300px;
         margin-left: 50px;
         align-items: left;
         filter: invert();
@@ -610,13 +615,13 @@ img.example-images.instruction-screenshot.active {
         img.example-images {
             margin: auto;
             padding-top: 30px;
-            height: 300px;
+            max-height: 300px;
         }
 
         img.example-images.invert {
             margin: auto;
             padding-top: 30px;
-            height: 300px;
+            max-height: 300px;
         }
     }
 
@@ -714,13 +719,13 @@ img.example-images.instruction-screenshot.active {
         img.example-images {
             margin: auto;
             padding-top: 20px;
-            height: 250px;
+            max-height: 250px;
         }
 
         img.example-images.invert {
             margin: auto;
             padding-top: 20px;
-            height: 250px;
+            maheight: 250px;
         }
 
         .iphone {
