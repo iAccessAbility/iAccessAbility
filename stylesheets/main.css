@@ -70,11 +70,6 @@
         color: #0063cc;
     }
 
-    /* Tablet version */
-    @media (max-width: 1100px) {
-
-    }
-
     /* Mobile version */
     @media (max-width: 768px) {
         h1 {
