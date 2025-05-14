@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const desktopLinks = desktopMenu ? desktopMenu.querySelectorAll("a") : [];
     const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
     if(toggleButton){
-         toggleButton.setAttribute("tabindex", "0");
+        toggleButton.setAttribute("tabindex", "0");
     }
     function setupInitialTabIndexes() {
         desktopLinks.forEach(link => {
-            link.setAttribute("tabindex", "0");
+            link.setAttribute("tabindex", "1");
         });
         mobileLinks.forEach(link => {
             link.setAttribute("tabindex", "-1");
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileMenu.setAttribute("aria-hidden", isExpanded);
         if (isExpanded) {
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", "1");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.setAttribute("tabindex", "-1");
             });
             mobileLinks.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", "1");
             });
         }
         body.classList.toggle("no-scroll", !isExpanded);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", "1");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", "1");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", "1");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
