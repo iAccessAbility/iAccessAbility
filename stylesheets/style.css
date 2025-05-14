@@ -12,22 +12,6 @@
         overflow: scroll;
     }
 
-    h1 {
-        text-align: center;
-        font-size: 6em;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    h3 {
-        text-align: center;
-        font-size: 3.1em;
-        font-weight: 400;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-bottom: 4em;
-    }
-
     p {
         text-align: center;
         font-family: sans-serif;
