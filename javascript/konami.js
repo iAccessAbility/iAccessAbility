@@ -4,7 +4,7 @@
     let konamiIndex = 0;
     let timer = null;
     let isTouchDevice = false;
-    let altKeyPressed = false; // Track Alt key state
+    let altKeyPressed = false;
     function createElements() {
         // Icon
         const iconContainer = document.createElement("div");
@@ -272,7 +272,7 @@
                 left: 20px;
                 width: 50px;
                 height: 50px;
-                background-color: rgba(30, 144, 255, 0.6);
+                background-color: rgba(30, 120, 220, 0.8);
                 backdrop-filter: blur(2px);
                 -webkit-backdrop-filter: blur(2px);
                 border-radius: 50%;
@@ -288,7 +288,7 @@
                 position: fixed;
                 bottom: 20px;
                 left: 80px;
-                background-color: rgba(30, 144, 255, 0.6);
+                background-color: rgba(30, 120, 220, 0.9);
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
                 color: #fff;
@@ -412,6 +412,12 @@
         }
         // Event listener for icon to toggle popup
         iconContainer.addEventListener("click", toggleDisplay);
+        // Event listenter for enter key
+        iconContainer.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                toggleDisplay(event);
+            }
+        });
         iconContainer.addEventListener("touchstart", toggleDisplay);
         // Event listener for Konami Message to dismiss Popup
         konamiMessage.addEventListener("click", closePopup);

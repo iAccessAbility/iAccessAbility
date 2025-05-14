@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.querySelector(".menu-toggle");
+    const desktopMenu = document.getElementById("desktop-nav");
     const mobileMenu = document.getElementById("mobile-menu");
     const body = document.body;
     const site = document.querySelector(".site");
-    const menuLinks = mobileMenu.querySelectorAll("a"); // Get all links in the menu
+    const menuLinks = mobileMenu.querySelectorAll("a");
+
+    if (desktopMenu) {
+        const menuLinks = desktopMenu.querySelectorAll("a");
+        menuLinks.forEach(link => {
+            link.setAttribute("tabindex", "0");
+        });
+    }
 
     // Toggle the menu when the button is clicked
     toggleButton.addEventListener("click", (event) => {
-        event.stopPropagation(); // Prevent click event from propagating to document
+        event.stopPropagation();
         const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
 
         toggleButton.setAttribute("aria-expanded", !isExpanded);
