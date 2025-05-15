@@ -69,7 +69,12 @@
         overflow-wrap: break-word;
     }
 
-    a.links {
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    .links {
         color: #8bc3ff;
         text-decoration: none;
         transition: all 200ms ease;
@@ -82,9 +87,9 @@
             transform: scale(1.1);
         }
 
-        a.links:hover,
-        a.links:focus,
-        a.links:active {
+        .links:hover,
+        .links:focus,
+        .links:active {
             color: #0063cc;
         }
     }
@@ -192,7 +197,12 @@
         overflow-wrap: break-word;
     }
 
-    a.links {
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    .links {
         font-weight: 500;
         color: #4da3ff;
         text-decoration: none;
@@ -206,9 +216,9 @@
             transform: scale(1.1);
         }
 
-        a.links:hover,
-        a.links:focus,
-        a.links:active {
+        .links:hover,
+        .links:focus,
+        .links:active {
             color: #0063cc;
         }
     }
