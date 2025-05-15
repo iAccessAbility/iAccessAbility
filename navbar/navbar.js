@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function setupInitialTabIndexes() {
         desktopLinks.forEach(link => {
-            link.setAttribute("tabindex", "1");
+            link.setAttribute("tabindex", "0");
         });
         mobileLinks.forEach(link => {
             link.setAttribute("tabindex", "-1");
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileMenu.setAttribute("aria-hidden", isExpanded);
         if (isExpanded) {
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "1");
+                link.setAttribute("tabindex", "0");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "1");
+                link.setAttribute("tabindex", "0");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "1");
+                link.setAttribute("tabindex", "0");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             site.classList.remove("menu-open");
             toggleButton.setAttribute("aria-expanded", "false");
             desktopLinks.forEach(link => {
-                link.setAttribute("tabindex", "1");
+                link.setAttribute("tabindex", "0");
             });
             mobileLinks.forEach(link => {
                 link.setAttribute("tabindex", "-1");

@@ -10,9 +10,9 @@
     }
 
     .site {
+        margin: 0 auto;
         margin-top: 90px;
-        margin-left: 20em;
-        margin-right: 20em;
+        max-width: 450px;
     }
 
     h1 {
@@ -76,9 +76,9 @@
     }
 
     .site {
+        margin: 0 auto;
         margin-top: 90px;
-        margin-left: 20em;
-        margin-right: 20em;
+        max-width: 450px;
     }
 
     h1 {

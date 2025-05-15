@@ -7,6 +7,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
         <title>Services - iAccessAbility</title>
         <link rel="stylesheet" href="../stylesheets/services-form.css">
+        <link rel="stylesheet" href="../stylesheets/accessibility.css">
         <link rel="stylesheet" href="../navbar/navbar.css">
     </head>
     <body>
@@ -51,51 +52,51 @@
             </nav>
         </div>
         <!-- Services Form -->
-        <div class="site">
+        <main class="site">
             <h2>Request Services</h2>
             <div class="form">
                 <form id="ServiceRequest" method="POST" action="https://formsubmit.co/iAccessAbility@gmail.com">
                     <input type="date" name="Date" id="current-date" hidden>
                     <label>First Name&#58;</label>
-                    <input type="text" name="First Name" required size="15" maxlength="15" placeholder="John">
+                    <input type="text" name="First Name" required size="15" maxlength="15" placeholder="John" tabindex="2">
                     <br>
                     <label>Last Name&#58;</label>
-                    <input type="text" name="Last Name" required size="15" maxlength="15" placeholder="Appleseed">
+                    <input type="text" name="Last Name" required size="15" maxlength="15" placeholder="Appleseed" tabindex="2">
                     <br>
                     <label>Phone&#58;</label>
-                    <input type="tel" name="Phone Number" required size="15" placeholder="(555) 555-5555">
+                    <input type="tel" name="Phone Number" required size="15" placeholder="(555) 555-5555" tabindex="2">
                     <br>
                     <label>Email&#58;</label>
-                    <input type="email" name="Email Address" required size="22" placeholder="johnappleseed@example.com">
+                    <input type="email" name="Email Address" required size="22" placeholder="johnappleseed@example.com" tabindex="2">
                     <br>
                     <label>Service Request&#58;</label>
-                    <select name="Service" required>
+                    <select name="Service" required tabindex="2">
                         <option selected disabled>Select a Service</option>
-                        <option value="Tech Support">Tech Support</option>
-                        <option value="Personalized Consulting">Buying Consulting</option>
-                        <option value="One-on-One Training">One-on-One Training</option>
+                        <option value="Tech Support" tabindex="3">Tech Support</option>
+                        <option value="Personalized Consulting" tabindex="3">Buying Consulting</option>
+                        <option value="One-on-One Training" tabindex="3">One-on-One Training</option>
                     </select>
                     <br>
                     <label>Communication Preference&#58;</label>
-                    <select name="Communication" required>
+                    <select name="Communication" required tabindex="2">
                         <option selected disabled>Select</option>
-                        <option value="SMS">Direct Text</option>
-                        <option value="call">Phone Call</option>
-                        <option value="email">Email</option>
-                        <option value="WhatsApp Text">WhatsApp Text</option>
-                        <option value="WhatsApp Call">WhatsApp Call</option>
-                        <option value="Telegram Text">Telegram Text</option>
+                        <option value="SMS" tabindex="3">Direct Text</option>
+                        <option value="call" tabindex="3">Phone Call</option>
+                        <option value="email" tabindex="3">Email</option>
+                        <option value="WhatsApp Text" tabindex="3">WhatsApp Text</option>
+                        <option value="WhatsApp Call" tabindex="3">WhatsApp Call</option>
+                        <option value="Telegram Text" tabindex="3">Telegram Text</option>
                     </select>
                     <br>
                     <div class="agree-section">
                         <label for="agreement">
-                            <input type="checkbox" id="agreement" name="payment-acceptance" required>
+                            <input type="checkbox" id="agreement" name="payment-acceptance" required tabindex="2">
                             I agree to use Venmo or PayPal to pay for my services with iAccessAbility.
                         </label>
                     </div>
                     <br>
                     <!-- FormSubmit -->
-                    <input type="submit" name="request" value="Request Service" class="submit" id="btn" disabled>
+                    <input type="submit" name="request" value="Request Service" role="button" class="submit" id="btn" tabindex="3" disabled>
                     <input type="hidden" name="_next" value="https://leahdykema.github.io/iAccessAbility/html/thankyou.html">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
@@ -107,9 +108,9 @@
                 <p class="info">Services are only available to individuations in the U&#46;S&#46; and in&#45;person sessions are only available to locals of Pella&#44; IA&#46;</p>
                 <p class="info">Please note that iAccessAbility services uses PayPal and Venmo for all transactions with clients for security reasons&#46;</p>
                 <p class="info">Note&#44; I am in the Central Standard Time Zone &#40;CST&#41;&#44;&#46; All communication and references to time will be in Central Time&#46;</p>
-                <p class="info">For any questions&#44; please contact me at&#58; <a class="links" href="mailto:support@iaccessabilityservices.com">support&#64;iAccessAbillityServices&#46;com</a></p>
+                <p class="info">For any questions&#44; please contact me at&#58; <a class="links" href="mailto:support@iaccessabilityservices.com?subject=Request%20Service%20Inquiries" tabindex="4">support&#64;iAccessAbillityServices&#46;com</a></p>
             </div>
-        </div>
+        </main>
         <script>
             document.getElementById("ServiceRequest").addEventListener("submit", async function(event) {
             event.preventDefault(); // Prevent default submission first
