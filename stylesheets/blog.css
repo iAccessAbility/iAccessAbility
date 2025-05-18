@@ -164,3 +164,36 @@ footer.date {
         color: #0011cc;
     }
 }
+
+/* High Contrast */
+@media (prefers-contrast: more) {
+    .blog-post,
+    footer {
+        background: #eee;
+        border: #000 solid;
+    }
+
+    footer.date {
+        opacity: 0.9;
+    }
+
+    .blog-post footer {
+        border: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .blog-post,
+        footer {
+            background: #222;
+            border: #fff solid;
+        }
+
+        footer.date {
+            opacity: 0.9;
+        }
+
+        .blog-post footer {
+            border: none;
+        }
+    }
+}

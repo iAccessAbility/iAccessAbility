@@ -187,3 +187,23 @@ a {
         background-size: cover;
     }
 }
+
+@media (prefers-contrast: more) {
+    section {
+        background-color: #e6f2ff !important;
+    }
+
+    .image a {
+        text-decoration: none !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        section {
+            background-color: #000c1e !important;
+        }
+
+        .image a {
+            text-decoration: none !important;
+        }
+    }
+}

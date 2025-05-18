@@ -15,3 +15,86 @@
         outline-offset: 2px;
     }
 }
+
+/* High Contrast Settings */
+@media (prefers-contrast: more) {
+    * {
+        font-weight: bold;
+        word-wrap: break-word;
+        color: #000 !important;
+    }
+
+    a {
+        color: #0000ff !important;
+        text-decoration: underline;
+    }
+
+    div.disclaimer-section {
+            border: solid;
+        }
+
+    b {
+        font-weight: 600;
+    }
+
+    a {
+        color: #0000ff !important;
+        text-decoration: underline;
+        border-bottom: 1px solid currentColor;
+    }
+
+    section {
+        border: solid;
+    }
+
+    .info {
+        color: #000 !important;
+    }
+
+    @media (hover: hover) {
+        div.card:hover,
+        div.card:focus,
+        div.card:active {
+            transform: scale(1.1);
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #0063cc !important;
+            transform: scale(1.4);
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        * {
+            font-weight: bold;
+            color: #fff !important;
+        }
+
+        a {
+            color: #8bc3ff !important;
+            text-decoration: underline;
+        }
+
+        section {
+            border: solid;
+        }
+
+        div.disclaimer-section {
+            border: solid;
+        }
+
+        .info {
+            color: #fff !important;
+        }
+
+        @media (hover: hover) {
+            a:hover,
+            a:focus {
+                color: #0063cc !important;
+                transform: scale(1.4);
+            }
+        }
+    }
+}
