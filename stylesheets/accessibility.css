@@ -24,6 +24,11 @@
         color: #000 !important;
     }
 
+    *:focus {
+        outline: 5px solid #0000ff !important;
+        outline-offset: 2px;
+    }
+
     a {
         color: #0000ff !important;
         text-decoration: underline;
@@ -70,6 +75,11 @@
         * {
             font-weight: bold;
             color: #fff !important;
+        }
+
+        *:focus {
+            outline: 5px solid #8bc3ff !important;
+            outline-offset: 2px;
         }
 
         a {

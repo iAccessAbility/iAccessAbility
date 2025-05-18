@@ -311,6 +311,27 @@
                     width: 70%;
                 }
             }
+            @media (prefers-contrast: more) {
+                #konami-icon,
+                #hint-bubble {
+                    border: solid #000;
+                    background: #0063cc;
+                    color: #fff !important;
+                }
+                #konami-popup {
+                    border: solid;
+                }
+                @media (prefers-color-scheme: dark) {
+                    #konami-icon,
+                    #hint-bubble {
+                        border: solid;
+                        background: #0063cc;
+                    }
+                    #konami-popup {
+                        border: solid;
+                    }
+                }
+            }
         `;
         document.head.appendChild(style);
     }
