@@ -12,7 +12,7 @@
         iconContainer.setAttribute("role", "button");
         iconContainer.setAttribute("aria-label", "Controller");
         iconContainer.setAttribute("tabindex", "0");
-        iconContainer.innerHTML = "&#127918;";
+        iconContainer.innerHTML = '<img src="/img/game-controller.svg" alt="game controller" height="30" width="30" style="filter: invert();">';
         // Hint Bubble
         const hintBubble = document.createElement("div");
         hintBubble.id = "hint-bubble";
@@ -20,7 +20,7 @@
         // Popup
         const popup = document.createElement("div");
         popup.id = "konami-popup";
-        popup.style.display = "none"; // Start hidden
+        popup.style.display = "none";
         popup.innerHTML = `
             <p class="konami">Are you curious enough???</p>
             <div class="konami-container">
@@ -41,7 +41,7 @@
         // Touch Controller
         const controller = document.createElement("div");
         controller.id = "touch-controller";
-        controller.style.display = "none"; // Start hidden
+        controller.style.display = "none";
         controller.innerHTML = `
             <div class="button btn-arrow" data-key="ArrowUp">↑</div>
             <div class="button btn-arrow" data-key="ArrowDown">↓</div>
@@ -63,7 +63,6 @@
             popup,
             controller
         };
-        // Return element references for event listeners
     }
     // Add CSS Styles Dynamically
     function addStyles() {
@@ -347,7 +346,7 @@
         // Check for touch support on initial load
         window.addEventListener('touchstart', function onFirstTouch() {
             isTouchDevice = true;
-            addStyles(); // call add styles here to change after touch start
+            addStyles();
             window.removeEventListener('touchstart', onFirstTouch, false);
         }, false);
         addStyles();
@@ -356,12 +355,12 @@
         const countdownTimer = popup.querySelector("#countdown-timer");
         const arrows = popup.querySelectorAll(".arrow");
         const site = document.querySelector('.site');
-        // Function to reset Konami Code
+        // Function to reset
         function resetKonamiCode() {
             konamiIndex = 0;
             arrows.forEach(arrow => arrow.classList.remove("correct"));
         }
-        // Toggle Popup and Controller visibility
+        // Toggle visibility
         function toggleDisplay(event) {
             event.preventDefault();
             if (isTouchDevice) {
@@ -402,7 +401,7 @@
                 hintBubble.style.display = "block";
             }
         }
-        // Check Konami Code function
+        // Check Konami Code
         function checkKonamiCode(key) {
             if (isTouchDevice) {
                 controller.style.display = "flex";
@@ -420,11 +419,11 @@
                 resetKonamiCode();
             }
         }
-        // Countdown function
+        // Countdown
         function startCountdown() {
             let countdown = 5;
             countdownTimer.textContent = countdown;
-            clearInterval(timer); // Clear any previous timer
+            clearInterval(timer);
             timer = setInterval(() => {
                 countdown--;
                 countdownTimer.textContent = "Redirecting in: " + countdown + " seconds...";
@@ -434,7 +433,7 @@
                 }
             }, 1000);
         }
-        // Close Popup function
+        // Close Popup
         function closePopup() {
             site.classList.remove("blur");
             popup.style.display = "none";
@@ -464,13 +463,12 @@
             }
             // Check for Alt + ArrowUp combination
             if (event.altKey && event.key === "ArrowUp") {
-                event.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+                event.preventDefault();
                 site.classList.add("blur");
                 popup.style.display = "block";
                 controller.style.display = popup.style.display;
-                checkKonamiCode("ArrowUp"); // Manually check "ArrowUp" as first key
+                checkKonamiCode("ArrowUp");
             } else if (konamiIndex > 0) {
-                // Only check other keys if the sequence has started
                 checkKonamiCode(event.key);
             }
         });
