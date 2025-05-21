@@ -24,16 +24,16 @@
         popup.innerHTML = `
             <p class="konami">Are you curious enough???</p>
             <div class="konami-container">
-                <div class="arrow">↑</div>
-                <div class="arrow">↑</div>
-                <div class="arrow">↓</div>
-                <div class="arrow">↓</div>
-                <div class="arrow">←</div>
-                <div class="arrow">→</div>
-                <div class="arrow">←</div>
-                <div class="arrow">→</div>
-                <div class="arrow">B</div>
-                <div class="arrow">A</div>
+                <div class="arrow" tabindex="0">↑</div>
+                <div class="arrow" tabindex="0">↑</div>
+                <div class="arrow" tabindex="0">↓</div>
+                <div class="arrow" tabindex="0">↓</div>
+                <div class="arrow" tabindex="0">←</div>
+                <div class="arrow" tabindex="0">→</div>
+                <div class="arrow" tabindex="0">←</div>
+                <div class="arrow" tabindex="0">→</div>
+                <div class="arrow" tabindex="0">B</div>
+                <div class="arrow" tabindex="0">A</div>
             </div>
             <p class="konami" id="konami-message">Press Esc to close</p>
             <p class="konami" id="countdown-timer"></p>
@@ -269,7 +269,7 @@
             #konami-icon {
                 position: fixed;
                 bottom: 20px;
-                left: 20px;
+                left: 80px;
                 width: 50px;
                 height: 50px;
                 background-color: rgba(30, 100, 200, 0.8);
@@ -287,7 +287,7 @@
             #hint-bubble {
                 position: fixed;
                 bottom: 20px;
-                left: 80px;
+                left: 140px;
                 background-color: rgba(30, 100, 200, 0.9);
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
@@ -309,6 +309,14 @@
                 #touch-controller {
                     display: ${isTouchDevice ? 'flex' : 'none'};
                     width: 70%;
+                }
+                #konami-icon {
+                    bottom: 80px;
+                    left: 20px;
+                }
+                #hint-bubble {
+                    bottom: 80px;
+                    left: 80px;
                 }
             }
             @media (prefers-contrast: more) {
@@ -370,9 +378,13 @@
                 if (hintBubble.style.transform === "scaleX(0)") {
                     hintBubble.style.transform = "scaleX(1)";
                     hintBubble.style.pointerEvents = "auto";
+                    hintBubble.setAttribute("aria-hidden", "false");
+                    hintBubble.setAttribute("tabindex", "0");
                 } else {
                     hintBubble.style.transform = "scaleX(0)";
                     hintBubble.style.pointerEvents = "none";
+                    hintBubble.setAttribute("aria-hidden", "true");
+                    hintBubble.setAttribute("tabindex", "-1");
                 }
                 if (popup.style.display === "block") {
                     site.classList.add("blur");
@@ -385,7 +397,7 @@
                     site.classList.remove("blur");
                 }
                 site.classList.remove("blur");
-                popup.style.display = "none"; // Hide the popup
+                popup.style.display = "none";
                 controller.style.display = "none";
                 hintBubble.style.display = "block";
             }

@@ -16,6 +16,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    *:focus,
+    *:hover {
+        outline: none !important;
+    }
+}
+
 /* High Contrast Settings */
 @media (prefers-contrast: more) {
     * {

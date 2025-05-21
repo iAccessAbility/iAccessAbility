@@ -30,7 +30,8 @@
         margin-bottom: 0;
     }
 
-    section {
+    section,
+    footer {
         margin: 40px auto;
         max-width: 1000px;
         width: 70%;
@@ -39,7 +40,7 @@
         border-radius: 20px;
     }
 
-    section:last-child {
+    footer {
         margin-top: 0;
         padding-top: 5px;
     }
@@ -84,7 +85,8 @@
             margin-bottom: 0;
         }
 
-        section {
+        section,
+        footer {
             margin: 5% auto;
             width: 90%;
         }
@@ -133,7 +135,8 @@
         margin-bottom: 0;
     }
 
-    section {
+    section,
+    footer {
         margin: 40px auto;
         max-width: 1000px;
         width: 70%;
@@ -181,7 +184,8 @@
             margin-bottom: 0;
         }
 
-        section {
+        section,
+        footer {
             margin: 5% auto;
             width: 90%;
         }
