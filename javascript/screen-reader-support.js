@@ -85,6 +85,7 @@
         alignItems: "center",
         justifyContent: "center",
         fontSize: "9px",
+        lineHeight: "1.2",
         textAlign: "center",
         color: "white",
         cursor: "pointer",
