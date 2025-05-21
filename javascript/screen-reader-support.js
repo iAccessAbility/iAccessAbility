@@ -68,7 +68,7 @@
     toggleButton.setAttribute("role", "button");
     toggleButton.setAttribute("aria-label", "Screen Reader Mode");
     toggleButton.setAttribute("tabindex", "1");
-    toggleButton.innerHTML = '<img src="/img/accessibility-vo.svg" height="40" width="40" alt="" aria-hiddne="true">';
+    toggleButton.innerHTML = '<img src="/img/accessibility-vo.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
     Object.assign(toggleButton.style, {
         position: "fixed",
         bottom: "20px",
@@ -89,12 +89,16 @@
     style.innerHTML = `
         @media (prefers-contrast: more) {
             #tabindex-toggle.high-contrast {
+                overflow: "hidden",
+                padding: "0",
                 border: solid 4px #000;
                 color: #fff !important;
             }
 
             @media (prefers-color-scheme: dark) {
                 #tabindex-toggle.high-contrast {
+                    overflow: "hidden",
+                    padding: "0",
                     border: solid 4px #fff;
                     color: #fff !important;
                 }

@@ -10,9 +10,9 @@
         const iconContainer = document.createElement("div");
         iconContainer.id = "konami-icon";
         iconContainer.setAttribute("role", "button");
-        iconContainer.setAttribute("aria-label", "Controller");
+        iconContainer.setAttribute("aria-label", "Game Controller");
         iconContainer.setAttribute("tabindex", "0");
-        iconContainer.innerHTML = '<img src="/img/game-controller.svg" alt="game controller" height="30" width="30" style="filter: invert();">';
+        iconContainer.innerHTML = '<img src="/img/game-controller.svg" alt="" aria-hidden="true" style="width: 30px; height: 30px; display: block; margin: 0; padding: 0; box-sizing: border-box; filter: invert();">';
         // Hint Bubble
         const hintBubble = document.createElement("div");
         hintBubble.id = "hint-bubble";
