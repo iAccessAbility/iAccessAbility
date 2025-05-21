@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Leah Dykema">
-        <meta name="description" content="iAccessAbility Blog">
+        <meta name="description" content="Life Beyond Sight, a look into Leah's personal life experiences.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" name="image" content="../img/favicon.png">
-        <meta property="og:title" content="iAccessAbility Blog">
-        <meta property="og:description" content="iAccessAbility Blog">
+        <meta property="og:title" content="Life Beyond Sigt - iAccessAbility">
+        <meta property="og:description" content="Life Beyond Sight, a look into Leah's personal life experiences.">
         <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico?">
         <link rel="apple-touch-icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
@@ -21,7 +21,7 @@
         <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="../img/favicon.png">
         <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="../img/favicon.png">
         <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="../img/favicon.png">
-        <title>iAccessAbility Blog</title>
+        <title>Life Beyond Sight - iAccessAbility</title>
         <link rel="stylesheet" href="../stylesheets/blog.css">
         <link rel="stylesheet" href="../stylesheets/accessibility.css">
         <link rel="stylesheet" href="../navbar/navbar.css">
@@ -146,10 +146,10 @@
             <!-- Copyright / Disclaimer -->
             <footer>
                 <p class="info">&copy; 2025 iAccessAbility&#46; All original content is protected under copyright law&#46;</p>
-                <p class="info"><a class="links" href="mailto:feedback@iaccessabilityservices.com" tabindex="2">Feedback</a> &#124; <a class="links" href="mailto:support@iaccessabilityservices.com" tabindex="2">Support</a> &#124; <a href="mailto:report@iaccessabilityservices.com">Report</a> &#124; <a class="links" href="policy/index.html" tabindex="2">Privacy Policy</a></p>
+                <p class="info"><a class="links" href="mailto:feedback@iaccessabilityservices.com" tabindex="0">Feedback</a> &#124; <a class="links" href="mailto:support@iaccessabilityservices.com" tabindex="0">Support</a> &#124; <a href="mailto:report@iaccessabilityservices.com">Report</a> &#124; <a class="links" href="policy/index.html" tabindex="0">Privacy Policy</a></p>
             </footer>
         </main>
-        <script src="../navbar/navbar.js"></script>
+        <!-- disable Drag and Drop / Right-click on Images -->
         <script>
             document.addEventListener('contextmenu', function(e) {
                 if (e.target.tagName === 'IMG') {
@@ -157,5 +157,7 @@
                 }
             });
         </script>
+        <script src="../javascript/screen-reader-support.js"></script>
+        <script src="../navbar/navbar.js"></script>
     </body>
 </html>

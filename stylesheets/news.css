@@ -11,6 +11,8 @@
 
     h1 {
         margin-top: 2em;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     h2 {
@@ -21,12 +23,17 @@
         font-size: 20px;
     }
 
-    section {
+    section,
+    footer {
         margin-left: 30%;
         margin-right: 30%;
         padding: 1%;
         border-radius: 10px;
         background-color: #222;
+    }
+
+    footer {
+        margin-bottom: 20px;
     }
 
     p.info {
@@ -50,14 +57,16 @@
     }
 
     @media (max-width: 1100px) {
-        section {
+        section,
+        footer {
             margin-left: 20%;
             margin-right: 20%;
         }
     }
 
     @media (max-width: 768px) {
-        section {
+        section,
+        footer {
             margin-left: 10%;
             margin-right: 10%;
             padding: 2%;
@@ -77,6 +86,8 @@
 
     h1 {
         margin-top: 2em;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     h2 {
@@ -87,12 +98,17 @@
         font-size: 20px;
     }
 
-    section {
+    section,
+    footer {
         margin-left: 30%;
         margin-right: 30%;
         padding: 1%;
         border-radius: 10px;
         background-color: #eee;
+    }
+
+    footer {
+        margin-bottom: 20px;
     }
 
     p.info {
@@ -116,14 +132,16 @@
     }
 
     @media (max-width: 1100px) {
-        section {
+        section,
+        footer {
             margin-left: 20%;
             margin-right: 20%;
         }
     }
 
     @media (max-width: 768px) {
-        section {
+        section,
+        footer {
             margin-left: 10%;
             margin-right: 10%;
             padding: 2%;
@@ -148,7 +166,8 @@
         color: #000 !important;
     }
 
-    section {
+    section,
+    footer {
         border: solid;
     }
 
@@ -175,7 +194,8 @@
             color: #fff !important;
         }
 
-        section {
+        section,
+        footer {
             border: solid;
         }
 

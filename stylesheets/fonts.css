@@ -1,4 +1,5 @@
 @font-face {
     font-family: "Montserrat";
-    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf)
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+    font-display: swap;
 }

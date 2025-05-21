@@ -10,7 +10,7 @@
         word-break: break-word
     }
 
-    h1 {
+    h1.title {
         margin-bottom: 10px;
         font-size: 2.5rem;
         text-align: center;
@@ -176,7 +176,7 @@
     }
 
     @media (max-width: 768px) {
-        h1 {
+        h1.title {
             margin-left: 10%;
             margin-right: 10%;
             font-size: 2.3rem
@@ -218,7 +218,7 @@
         word-break: break-word;
     }
 
-    h1 {
+    h1.title {
         margin-bottom: 10px;
         font-size: 2.5rem;
         text-align: center;
@@ -384,7 +384,7 @@
     }
 
     @media (max-width: 768px) {
-        h1 {
+        h1.title {
             margin-left: 10%;
             margin-right: 10%;
             font-size: 2.3rem

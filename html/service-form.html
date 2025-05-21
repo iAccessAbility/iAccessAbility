@@ -2,10 +2,29 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="Request services with iAccessAbility.">
         <meta name="author" content="Leah Dykema">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" name="image" content="../img/favicon.png">
+        <meta property="og:title" content="Request Services - iAccessAbility">
+        <meta property="og:description" content="Request services with iAccessAbility.">
         <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
-        <title>Services - iAccessAbility</title>
+        <link rel="apple-touch-icon" type="image/x-icon" href="../img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/x-icon" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="..img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="../img/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="../img/favicon.png">
+        <link rel="shortcut icon" type="image/svg" href="../img/favicon.ico">
+        <title>Request Services - iAccessAbility</title>
         <link rel="stylesheet" href="../stylesheets/services-form.css">
         <link rel="stylesheet" href="../stylesheets/accessibility.css">
         <link rel="stylesheet" href="../navbar/navbar.css">
@@ -51,46 +70,48 @@
                 </ul>
             </nav>
         </div>
+        <h1 style="margin-top: 200px; margin-left: auto; margin-right: auto; text-align: center; font-size: 30px; width: 400px;">This Page is currently under development</h1>
+        <a class="links" style="text-align: center; margin-top: 10px; margin-left: auto; margin-right: auto; display: block; font-size: 20px;" href="/index.html">Home</a>
         <!-- Services Form -->
-        <main class="site">
+        <main class="site" style="display: none;" aria-hidden="true">
             <h2>Request Services</h2>
             <div class="form">
                 <form id="ServiceRequest" method="POST" action="https://formsubmit.co/iAccessAbility@gmail.com">
                     <input type="date" name="Date" id="current-date" hidden>
                     <label>First Name&#58;</label>
-                    <input type="text" name="First Name" required size="15" maxlength="15" placeholder="John" tabindex="2">
+                    <input type="text" name="First Name" required size="15" maxlength="15" placeholder="John" tabindex="0">
                     <br>
                     <label>Last Name&#58;</label>
-                    <input type="text" name="Last Name" required size="15" maxlength="15" placeholder="Appleseed" tabindex="2">
+                    <input type="text" name="Last Name" required size="15" maxlength="15" placeholder="Appleseed" tabindex="0">
                     <br>
                     <label>Phone&#58;</label>
-                    <input type="tel" name="Phone Number" required size="15" placeholder="(555) 555-5555" tabindex="2">
+                    <input type="tel" name="Phone Number" required size="15" placeholder="(555) 555-5555" tabindex="0">
                     <br>
                     <label>Email&#58;</label>
-                    <input type="email" name="Email Address" required size="22" placeholder="johnappleseed@example.com" tabindex="2">
+                    <input type="email" name="Email Address" required size="22" placeholder="johnappleseed@example.com" tabindex="0">
                     <br>
                     <label>Service Request&#58;</label>
-                    <select name="Service" required tabindex="2">
+                    <select name="Service" required tabindex="0">
                         <option selected disabled>Select a Service</option>
-                        <option value="Tech Support" tabindex="3">Tech Support</option>
-                        <option value="Personalized Consulting" tabindex="3">Buying Consulting</option>
-                        <option value="One-on-One Training" tabindex="3">One-on-One Training</option>
+                        <option value="Tech Support" tabindex="0">Tech Support</option>
+                        <option value="Personalized Consulting" tabindex="0">Buying Consulting</option>
+                        <option value="One-on-One Training" tabindex="0">One-on-One Training</option>
                     </select>
                     <br>
                     <label>Communication Preference&#58;</label>
-                    <select name="Communication" required tabindex="2">
+                    <select name="Communication" required tabindex="0">
                         <option selected disabled>Select</option>
-                        <option value="SMS" tabindex="3">Direct Text</option>
-                        <option value="call" tabindex="3">Phone Call</option>
-                        <option value="email" tabindex="3">Email</option>
-                        <option value="WhatsApp Text" tabindex="3">WhatsApp Text</option>
-                        <option value="WhatsApp Call" tabindex="3">WhatsApp Call</option>
-                        <option value="Telegram Text" tabindex="3">Telegram Text</option>
+                        <option value="SMS" tabindex="0">Direct Text</option>
+                        <option value="call" tabindex="0">Phone Call</option>
+                        <option value="email" tabindex="0">Email</option>
+                        <option value="WhatsApp Text" tabindex="0">WhatsApp Text</option>
+                        <option value="WhatsApp Call" tabindex="0">WhatsApp Call</option>
+                        <option value="Telegram Text" tabindex="0">Telegram Text</option>
                     </select>
                     <br>
                     <div class="agree-section">
                         <label for="agreement">
-                            <input type="checkbox" id="agreement" name="payment-acceptance" required tabindex="2">
+                            <input type="checkbox" id="agreement" name="payment-acceptance" required tabindex="0">
                             I agree to use Venmo or PayPal to pay for my services with iAccessAbility.
                         </label>
                     </div>
@@ -108,7 +129,7 @@
                 <p class="info">Services are only available to individuations in the U&#46;S&#46; and in&#45;person sessions are only available to locals of Pella&#44; IA&#46;</p>
                 <p class="info">Please note that iAccessAbility services uses PayPal and Venmo for all transactions with clients for security reasons&#46;</p>
                 <p class="info">Note&#44; I am in the Central Standard Time Zone &#40;CST&#41;&#44;&#46; All communication and references to time will be in Central Time&#46;</p>
-                <p class="info">For any questions&#44; please contact me at&#58; <a class="links" href="mailto:support@iaccessabilityservices.com?subject=Request%20Service%20Inquiries" tabindex="4">support&#64;iAccessAbillityServices&#46;com</a></p>
+                <p class="info">For any questions&#44; please contact me at&#58; <a class="links" href="mailto:support@iaccessabilityservices.com?subject=Request%20Service%20Inquiries" tabindex="0">support&#64;iAccessAbillityServices&#46;com</a></p>
             </div>
         </main>
         <script>
@@ -151,6 +172,7 @@
                 form.addEventListener("input", checkFormCompletion);
             });
         </script>
+        <script src="../javascript/screen-reader-support.js"></script>
         <script src="../navbar/navbar.js"></script>
     </body>
 </html>

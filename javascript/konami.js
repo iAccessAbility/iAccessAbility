@@ -272,7 +272,7 @@
                 left: 80px;
                 width: 50px;
                 height: 50px;
-                background-color: rgba(30, 100, 200, 0.8);
+                background-color: rgba(30, 50, 200, 0.8);
                 backdrop-filter: blur(2px);
                 -webkit-backdrop-filter: blur(2px);
                 border-radius: 50%;

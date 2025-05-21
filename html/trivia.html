@@ -75,20 +75,21 @@
                     <div id="question-container">
                         <p id="question"></p>
                         <ul id="options">
-                            <li class="list-option" onclick="checkAnswer(0)" role="button" tabindex="2">Option 1</li>
-                            <li class="list-option" onclick="checkAnswer(1)" role="button" tabindex="2">Option 2</li>
-                            <li class="list-option" onclick="checkAnswer(2)" role="button" tabindex="2">Option 3</li>
-                            <li class="list-option" onclick="checkAnswer(3)" role="button" tabindex="2">Option 4</li>
+                            <li class="list-option" onclick="checkAnswer(0)" role="button" tabindex="0">Option 1</li>
+                            <li class="list-option" onclick="checkAnswer(1)" role="button" tabindex="0">Option 2</li>
+                            <li class="list-option" onclick="checkAnswer(2)" role="button" tabindex="0">Option 3</li>
+                            <li class="list-option" onclick="checkAnswer(3)" role="button" tabindex="0">Option 4</li>
                         </ul>
                     </div>
                     <div id="fun-fact" class="hidden">
                         <p id="fact"></p>
                         <br>
-                        <button class="site-button" onclick="nextQuestion()" role="button" tabindex="3">Next Question</button>
+                        <button class="site-button" onclick="nextQuestion()" role="button" tabindex="0">Next Question</button>
                     </div>
                 </div>
             </div>
         </main>
+        <script src="../javascript/screen-reader-support.js"></script>
         <script src="../javascript/trivia.js"></script>
         <script src="../navbar/navbar.js"></script>
     </body>

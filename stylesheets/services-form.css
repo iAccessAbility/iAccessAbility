@@ -1,4 +1,14 @@
-@import "fonts.css";
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: #fff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    h1 {
+        color: #000;
+    }
+}
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
