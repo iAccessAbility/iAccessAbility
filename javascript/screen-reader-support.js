@@ -45,14 +45,12 @@
     function applyState(state) {
         if (state) {
             addTabindexToAll();
-            toggleButton.innerHTML = "Screen Reader Mode";
             toggleButton.setAttribute("aria-label", "Reset");
             toggleButton.setAttribute("tabindex", "0");
             toggleButton.style.backgroundColor = "rgba(30, 100, 30, 0.8)";
             toggleButton.classList.add("active");
         } else {
             restoreOriginalTabindexes();
-            toggleButton.innerHTML = "Screen Reader Mode";
             toggleButton.setAttribute("aria-label", "Screen Reader Mode");
             toggleButton.setAttribute("tabindex", "1");
             toggleButton.style.backgroundColor = "rgba(30, 50, 200, 0.8)";
@@ -70,7 +68,7 @@
     toggleButton.setAttribute("role", "button");
     toggleButton.setAttribute("aria-label", "Screen Reader Mode");
     toggleButton.setAttribute("tabindex", "1");
-    toggleButton.innerHTML = "Screen Reader Mode";
+    toggleButton.innerHTML = '<img src="/img/accessibility-vo.svg" height="40" width="40" alt="" aria-hiddne="true">';
     Object.assign(toggleButton.style, {
         position: "fixed",
         bottom: "20px",
@@ -84,10 +82,6 @@
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        fontSize: "9px",
-        lineHeight: "1.2",
-        textAlign: "center",
-        color: "white",
         cursor: "pointer",
         zIndex: "9999",
     });
