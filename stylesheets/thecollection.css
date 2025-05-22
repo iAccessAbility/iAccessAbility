@@ -21,27 +21,31 @@
 
     .site {
         margin-top: 50px;
+        margin-bottom: 40px;
         margin-left: 15%;
         margin-right: 15%;
         text-align: center;
         color: #fff;
     }
 
-    h1,
+    h1.title,
     h2,
     h3 {
         background-color: #222;
         margin: 5px auto;
         padding: 5px;
-        width: 920px;
+        max-width: 920px;
+        border: solid 2px #8bc3ff55;
         border-radius: 8px;
     }
 
-    p.site-description {
+    p.site-description,
+    footer {
         background-color: #222;
         margin: 10px auto;
         padding: 5px;
         width: 920px;
+        border: solid 2px #8bc3ff55;
         border-radius: 8px;
     }
 
@@ -56,8 +60,14 @@
         background-color: #222;
         margin: 5px;
         padding: 10px;
+        border: solid 2px #8bc3ff55;
         border-radius: 8px;
         width: 300px;
+        transition: all 200ms ease;
+    }
+
+    a.links {
+        color: #8bc3ff;
         transition: all 200ms ease;
     }
 
@@ -65,9 +75,13 @@
         div.device:hover {
             transform: scale(1.1);
         }
+
+        a.links:hover {
+            color: #0063cc;
+        }
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1300px) {
         body:before {
             content: '';
             display: block;
@@ -81,6 +95,14 @@
             background-repeat: no-repeat;
             background-size: cover;
             filter: invert();
+        }
+
+        h1,
+        h2,
+        h3,
+        p.site-description,
+        footer {
+            width: 100%;
         }
     }
 
@@ -108,11 +130,149 @@
         h1,
         h2,
         h3,
-        p.site-description {
+        div.device,
+        p.site-description,
+        footer {
             width: 70%;
         }
+    }
+}
 
-        div.device {
+/* light theme */
+@media (prefers-color-scheme: light) {
+    body:before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../img/YT-banner-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: invert(0);
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+    .site {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+        color: #000;
+    }
+
+    h1.title,
+    h2,
+    h3 {
+        background-color: #eee;
+        margin: 5px auto;
+        padding: 5px;
+        max-width: 920px;
+        border: solid 2px #8bc3ff55;
+        border-radius: 8px;
+    }
+
+    p.site-description,
+    footer {
+        background-color: #eee;
+        margin: 10px auto;
+        padding: 5px;
+        width: 920px;
+        border: solid 2px #8bc3ff55;
+        border-radius: 8px;
+    }
+
+    div.devices {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div.device {
+        background-color: #eee;
+        margin: 5px;
+        padding: 10px;
+        border: solid 2px #8bc3ff55;
+        border-radius: 8px;
+        width: 300px;
+        transition: all 200ms ease;
+    }
+
+    a.links {
+        color: #8bc3ff;
+        transition: all 200ms ease;
+    }
+
+    @media (hover: hover) {
+        div.device:hover {
+            transform: scale(1.1);
+        }
+
+        a.links:hover {
+            color: #0063cc;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        body:before {
+            content: '';
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: url(../img/YT-banner-background-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(0);
+        }
+
+        h1,
+        h2,
+        h3,
+        p.site-description,
+        footer {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body:before {
+            content: '';
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: url(../img/YT-banner-background-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(0);
+        }
+
+        .site {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        div.device,
+        p.site-description,
+        footer {
             width: 70%;
         }
     }
