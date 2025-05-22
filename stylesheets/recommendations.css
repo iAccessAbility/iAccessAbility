@@ -19,11 +19,13 @@
     }
 
     hr {
+        position: relative;
         display: block;
         margin: auto;
         width: 100%;
         color: #222;
         opacity: 50%;
+        z-index: -1;
     }
 
     div.card-group {
@@ -100,7 +102,10 @@
             margin-left: 1%;
         }
 
-        div.title,
+        div.title {
+            width: 700px;
+        }
+
         div.card-group,
         div.info {
             width: 900px;
@@ -118,9 +123,12 @@
         }
 
         div.title,
-        div.card-group,
         div.card,
         div.info {
+            max-width: 250px;
+        }
+
+        div.card-group {
             width: 100%;
         }
     }

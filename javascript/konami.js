@@ -287,7 +287,7 @@
                 position: fixed;
                 bottom: 20px;
                 left: 140px;
-                background-color: rgba(30, 100, 200, 0.9);
+                background-color: rgba(30, 50, 200, 0.8);
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
                 color: #fff;
@@ -304,6 +304,15 @@
             #touch-controller {
                 display: none; /* Hide on desktop */
             }
+            @media (hover: hover) {
+                #konami-icon,
+                #hint-bubble {
+                    transition: all 200ms ease;
+                }
+                #konami-icon:hover {
+                    scale: 1.2;
+                }
+            }
             @media (max-width: 768px) {
                 #touch-controller {
                     display: ${isTouchDevice ? 'flex' : 'none'};
@@ -314,7 +323,7 @@
                     left: 20px;
                 }
                 #hint-bubble {
-                    bottom: 80px;
+                    bottom: 79px;
                     left: 80px;
                 }
             }

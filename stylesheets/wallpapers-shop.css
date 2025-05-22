@@ -1,0 +1,243 @@
+@import "fonts.css";
+
+/* Apply to All themes */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.site {
+    margin-top: 44px;
+    margin-bottom: 44px;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+h1.title {
+    font-size: 60px;
+    border-bottom: solid 1px;
+}
+
+h2 {
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 1110px;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+p.description {
+    margin-top: 6px;
+    font-size: 25px;
+}
+
+p.details {
+    margin-top: 5px;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    display: block;
+    margin: auto;
+    max-width: 1050px;
+    opacity: 50%;
+    z-index: -1;
+}
+
+img.wallpaper {
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: 300px;
+}
+
+img.wallpaper.desktop {
+    height: 200px;
+}
+
+div.title {
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 1110px;
+}
+
+div.card-group {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.card {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: left;
+    transition: all 300ms ease;
+}
+
+footer {
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 1110px;
+    border-radius: 10px;
+}
+
+@media (hover: hover) {
+    div.card:hover {
+        border: solid 3px #8bc3ff;
+        scale: 1.1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .site {
+        width: 100%;
+    }
+
+    div.title,
+    h2,
+    hr,
+    footer {
+        width: 730px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site {
+        margin: 44px 30px;
+        width: 100%;
+    }
+
+    h1.title {
+        font-size: 30px;
+    }
+
+    h2 {
+        width: 350px;
+        font-size: 25px;
+    }
+
+    p.description {
+        margin: auto;
+        margin-top: 5px;
+        width: 230px;
+        font-size: 15px;
+    }
+
+    div.title,
+    hr,
+    footer {
+        max-width: 350px;
+    }
+
+    img.wallpaper.desktop {
+        width: 310px;
+    }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    div.title,
+    h2 {
+        background-color: #222;
+    }
+
+    a.links {
+        color: #8bc3ff;
+        text-decoration: none;
+        transition: all 200ms ease;
+    }
+
+    hr {
+        color: #222;
+    }
+
+    p.info {
+        text-align: left;
+        font-size: 17px;
+        color: #a6a6a6;
+    }
+
+    div.card {
+        background-color: #222;
+    }
+
+    footer {
+        background-color: #222;
+    }
+
+    @media (hover: hover) {
+        a.links:hover,
+        a.links:focus {
+            color: #0063cc;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    div.title,
+    h2 {
+        background-color: #eee;
+    }
+
+    a.links {
+        color: #4da3ff;
+        text-decoration: none;
+        transition: all 200ms ease;
+    }
+
+    hr {
+        color: #eee;
+    }
+
+    p.info {
+        text-align: left;
+        font-size: 17px;
+        color: #a3a3a3;
+    }
+
+    div.card {
+        background-color: #eee;
+    }
+
+    footer {
+        background-color: #eee;
+    }
+
+    @media (hover: hover) {
+        a.links:hover,
+        a.links:focus {
+            color: #0063cc;
+            text-decoration: underline;
+        }
+    }
+}

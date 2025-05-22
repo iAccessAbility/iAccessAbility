@@ -87,6 +87,17 @@
     });
     const style = document.createElement("style");
     style.innerHTML = `
+        @media (hover: hover) {
+            #tabindex-toggle {
+                transition: all 200ms ease;
+            }
+
+            #tabindex-toggle:hover,
+            #tabindex-toggle:focus {
+                scale: 1.2;
+            }
+        }
+
         @media (prefers-contrast: more) {
             #tabindex-toggle.high-contrast {
                 overflow: "hidden",
