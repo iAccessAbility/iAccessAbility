@@ -26,7 +26,7 @@ def generate_sitemap(urls):
         xml.append(f"       <loc>{BASE_URL}/{url}</loc>")
         xml.append(f"           <lastmod>{today}</lastmod>")
         xml.append("            <changefreq>monthly</changefreq>")
-        xml.append("        <priority>0.7</priority>")
+        xml.append("        <priority>1.0</priority>")
         xml.append("    </url>")
 
     xml.append("</urlset>")
