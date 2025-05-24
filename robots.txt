@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /html/trivia.html
+Disallow: /html/apple-store-escape.html
+Disallow: /html/thankyou.html
+Disallow: /html/support.html
+Disallow: /html/service.html
+Disallow: /html/service-form.html
+Disallow: /html/dino.html
+Disallow: /html/theapplecollection.html
+Allow: /
+
+Sitemap: https://iaccessabilityservices.com/sitemap.xml
