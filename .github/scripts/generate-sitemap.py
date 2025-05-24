@@ -3,17 +3,26 @@ from datetime import datetime
 
 # Configuration
 BASE_URL = "https://iaccessabilityservices.com"
-EXCLUDE_FILES = {"404.html"}
+
+EXCLUDE_PATHS = {
+    "404.html",
+    "navbar/navbar.html",
+    "html/thankyou.html",
+    "html/dino.html",
+    "html/apple-store-escape.html",
+    "html/trivia.html"
+}
 OUTPUT_FILE = "sitemap.xml"
 
 def find_html_files(base_dir):
     html_files = []
     for root, dirs, files in os.walk(base_dir):
         for file in files:
-            if file.endswith(".html") and file not in EXCLUDE_FILES:
-                path = os.path.join(root, file)
-                url_path = os.path.relpath(path, ".").replace("\\", "/")
-                html_files.append(url_path)
+            if file.endswith(".html"):
+                full_path = os.path.join(root, file)
+                rel_path = os.path.relpath(full_path, ".").replace("\\", "/")
+                if rel_path not in EXCLUDE_PATHS:
+                    html_files.append(rel_path)
     return html_files
 
 def generate_sitemap(urls):
