@@ -11,7 +11,8 @@
     <body>
         <!-- Navigation -->
         <div class="nav-container" data-role="header" data-position="fixed">
-            <nav>
+            <!-- Normal Navigation -->
+            <nav id="main-navbar">
                 <!-- Top row: menu button on left, logo on right -->
                 <div class="mobile-header">
                     <!-- iAccessAbility -->
@@ -46,6 +47,22 @@
                     <li><a href="/html/support-articles.html" tabindex="-1">Support Articles</a></li>
                     <li><a href="/html/about.html" tabindex="-1">About</a></li>
                     <li><a href="/html/connect.html" tabindex="-1">Connect</a></li>
+                </ul>
+            </nav>
+            <!-- PWA Navigation -->
+            <nav id="pwa-navbar" style="display: none;">
+                <!-- Top row: menu button on left, logo on right -->
+                <div class="mobile-header">
+                    <!-- iAccessAbility -->
+                    <div class="logo-container">
+                        <a href="/html/support-articles.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="/html/support-articles.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><a href="/index.html"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a></li>
+                    <li><a href="/html/support-articles.html">Support Articles</a></li>
                 </ul>
             </nav>
         </div>

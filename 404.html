@@ -2,6 +2,8 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Leah Dykema">
+        <meta name="theme-color" content="#8bc3ff" id="theme-color-meta">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>404 Error at iAccessAbility</title>
         <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -441,25 +443,25 @@
             <a href="/html/dino.html" aria-label="Do you dare visit the dino?" tabindex="2"><img class="logo-dino" src="/img/logo-sad.svg" aria-hidden="true" height="200" alt=""></a>
             <h1>Oops&#33; This page failed to follow ADA compliance... now it&#39;s getting sued &#58;P</h1>
             <br>
-            <h3>Looks there&#39;s an issue with this link&#33; Double&#45;check the URL&#44; or if you think something&#39;s broken&#44; let us know at <a class="link" href="mailto:report@iaccessabilityservices.com?subject=Report%20an%20Issue%20on%20the%20iAccessAbility%20Website&body=Hello iAccessAbility,%0D%0A%0D%0AI%20found%20a%20broken%20link,%20image,%20or%20format%20issue%20on%20the%20iAccessAbility%20website.%0D%0A%0D%0AProblem:%20(Please%20tell%20us%20what%20kind%20of%20issue%20needs%20to%20addressed%20[Broken%20Redirect%20Link,%20Broken%20Image%20Link,%20Broken%20Page.])%0D%0A%0D%0ALocation:%20(Please%20provide%20a%20link%20to%20the%20page%20that%20needs%20to%20be%20looked%20at.)%0D%0A%0D%0ADetails:%20(Please%20provide%20as%20many%20details%20about%20the%20issue%20you%20are%20facing%20and%20how%20we%20can%20reproduce%20it%20to%20resolve%20the%20problem.)" tabindex="3">report&#64;iAccessAbilityServices&#46;com</a> so we can fix it&#46;</h3>
+            <h3>Looks like there&#39;s an issue with this link&#33; Double&#45;check the URL&#44; or if you think something&#39;s broken&#44; let us know so we can fix it <a class="link" href="mailto:report@iaccessabilityservices.com?subject=Report%20an%20Issue%20on%20the%20iAccessAbility%20Website&body=Hello iAccessAbility,%0D%0A%0D%0AI%20found%20a%20broken%20link,%20image,%20or%20format%20issue%20on%20the%20iAccessAbility%20website.%0D%0A%0D%0AProblem:%20(Please%20tell%20us%20what%20kind%20of%20issue%20needs%20to%20addressed%20[Broken%20Redirect%20Link,%20Broken%20Image%20Link,%20Broken%20Page.])%0D%0A%0D%0ALocation:%20(Please%20provide%20a%20link%20to%20the%20page%20that%20needs%20to%20be%20looked%20at.)%0D%0A%0D%0ADetails:%20(Please%20provide%20as%20many%20details%20about%20the%20issue%20you%20are%20facing%20and%20how%20we%20can%20reproduce%20it%20to%20resolve%20the%20problem.)" tabindex="3">here</a>&#46;</h3>
             <br>
             <!-- Delayed hint -->
             <div id="delayed-paragraph-container"></div>
             <div id="return-home-container"><h3><a class="link" href="/index.html" tabindex="4">Pretend this never happened &#40;Return Home&#41;</a></h3></div>
         </main>
-        <script src="navbar/navbar.js"></script>
-        <script src="javascript/redirects.js"></script>
+        <script src="/navbar/navbar.js"></script>
+        <script src="/javascript/redirects.js"></script>
+        <script src="/javascript/screen-reader-support.js"></script>
         <script>
             window.addEventListener('load', () => {
                 setTimeout(() => {
                     const container = document.getElementById('delayed-paragraph-container');
                     const paragraph = document.createElement('h3');
-                    paragraph.innerHTML = `Ever heard the phrase <em>hidden in plain sight</em>? Let’s just say the logo might be more than just a funny easter egg graphic…`;
+                    paragraph.innerHTML = `Ever heard the phrase <em>hidden in plain sight</em>? Let’s just say the logo might be more than just a funny easter egg…`;
                     container.appendChild(paragraph);
                     container.classList.add('expanded');
                 }, 5000);
             });
         </script>
-        <script src="javascript/screen-reader-support.js"></script>
     </body>
 </html>

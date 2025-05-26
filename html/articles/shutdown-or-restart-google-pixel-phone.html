@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Leah Dykema">
         <meta name="description" content="Learn how to shutdown, restart, or force restart your Google Pixel Smartphone.">
+        <meta name="theme-color" content="#eee" id="theme-color-meta">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" name="image" content="../../img/favicon.png">
         <meta property="og:title" content="Shutdown, Restart, or Force Restart Your Google Pixel Phone - iAccessAbility">
@@ -25,17 +26,19 @@
         <link rel="stylesheet" href="../../stylesheets/articles.css">
         <link rel="stylesheet" href="../../stylesheets/accessibility.css">
         <link rel="stylesheet" href="../../navbar/navbar.css">
+        <link rel="manifest" href="/manifest.json">
     </head>
     <body>
         <!-- Navigation -->
         <div class="nav-container" data-role="header" data-position="fixed">
-            <nav>
+            <!-- Normal Navigation -->
+            <nav id="main-navbar">
                 <!-- Top row: menu button on left, logo on right -->
                 <div class="mobile-header">
                     <!-- iAccessAbility -->
                     <div class="logo-container">
-                        <a href="index.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
-                        <a href="index.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                        <a href="/index.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="/index.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
                     </div>
                     <!-- Mobile Menu Toggle Button -->
                     <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
@@ -66,8 +69,24 @@
                     <li><a href="/html/connect.html" tabindex="-1">Connect</a></li>
                 </ul>
             </nav>
+            <!-- PWA Navigation -->
+            <nav id="pwa-navbar" style="display: none;">
+                <!-- Top row: menu button on left, logo on right -->
+                <div class="mobile-header">
+                    <!-- iAccessAbility -->
+                    <div class="logo-container">
+                        <a href="/html/support-articles.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="/html/support-articles.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><a href="/index.html"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a></li>
+                    <li><a href="/html/support-articles.html">Support Articles</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- Restart Google Pixel Phone Page -->
+        <!-- Restart Google Pixel Phone Article -->
         <main class="site">
             <h1>Shutdown, Restart, or Force Restart Your Google Pixel Phone</h1>
             <p>When something goes wrong with technology&#44; the first step of troubleshooting is to restart or force restart a device&#46; In this article&#44; we will go over how to restart your Google Pixel phone&#46;</p>
@@ -153,5 +172,6 @@
         </main>
         <script src="../../javascript/screen-reader-support.js"></script>
         <script src="../../navbar/navbar.js"></script>
+        <script src="../../javascript/pwa.js"></script>
     </body>
 </html>

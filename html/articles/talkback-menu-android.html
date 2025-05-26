@@ -3,6 +3,7 @@
     <head>
         <meta name="author" content="Leah Dykema">
         <meta name="description" content="Learn how to customize and use the TalkBack menu and reading controls on your Android device.">
+        <meta name="theme-color" content="#eee" id="theme-color-meta">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" name="image" content="../../img/favicon.png">
         <meta property="og:title" content="Customize and Use the TalkBack Menu and Reading Controls - iAccessAbility">
@@ -24,11 +25,13 @@
         <link rel="stylesheet" href="../../stylesheets/articles.css">
         <link rel="stylesheet" href="../../stylesheets/accessibility.css">
         <link rel="stylesheet" href="../../navbar/navbar.css">
+        <link rel="manifest" href="/manifest.json">
     </head>
     <body>
         <!-- Navigation -->
         <div class="nav-container" data-role="header" data-position="fixed">
-            <nav>
+            <!-- Normal Navigation -->
+            <nav id="main-navbar">
                 <!-- Top row: menu button on left, logo on right -->
                 <div class="mobile-header">
                     <!-- iAccessAbility -->
@@ -65,8 +68,24 @@
                     <li><a href="/html/connect.html" tabindex="-1">Connect</a></li>
                 </ul>
             </nav>
+            <!-- PWA Navigation -->
+            <nav id="pwa-navbar" style="display: none;">
+                <!-- Top row: menu button on left, logo on right -->
+                <div class="mobile-header">
+                    <!-- iAccessAbility -->
+                    <div class="logo-container">
+                        <a href="/html/support-articles.html" aria-label="Home"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="/html/support-articles.html" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><a href="/index.html"><img class="link-logo" src="/img/logo-colored.svg" alt="I Access Ability"></a></li>
+                    <li><a href="/html/support-articles.html">Support Articles</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- Braille Screen Input Page -->
+        <!-- Braille Screen Input Article -->
         <main class="site">
             <!-- Title -->
             <h1>Customize and Use the TalkBack Menu and Reading Controls</h1>
@@ -127,6 +146,7 @@
         </main>
         <script src="../../javascript/screen-reader-support.js"></script>
         <script src="../../navbar/navbar.js"></script>
+        <script src="../../javascript/pwa.js"></script>
         <script src="../../javascript/article-animation.js"></script>
     </body>
 </html>
