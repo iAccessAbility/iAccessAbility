@@ -10,11 +10,7 @@ EXCLUDE_PATHS = {
     "html/thankyou.html",
     "html/dino.html",
     "html/apple-store-escape.html",
-    "html/trivia.html",
-    # in developmet
-    "html/support.html",
-    "html/service.html",
-    "html/service-form.html"
+    "html/trivia.html"
 }
 OUTPUT_FILE = "sitemap.xml"
 
