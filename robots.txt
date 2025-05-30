@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: 404.html
 Disallow: /html/trivia.html
 Disallow: /html/apple-store-escape.html
 Disallow: /html/thankyou.html
