@@ -118,14 +118,14 @@
 
     @media (max-width: 768px) {
         .site {
-            margin-right: 8%;
-            margin-left: 8%;
+            margin-right: 0;
+            margin-left: 0;
         }
 
         div.title,
         div.card,
         div.info {
-            max-width: 250px;
+            width: 350px;
         }
 
         div.card-group {
@@ -258,7 +258,7 @@
         div.card-group,
         div.card,
         div.info {
-            width: 100%;
+            width: 350px;
         }
     }
 }

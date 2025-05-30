@@ -68,7 +68,7 @@
     toggleButton.setAttribute("role", "button");
     toggleButton.setAttribute("aria-label", "Screen Reader Mode");
     toggleButton.setAttribute("tabindex", "1");
-    toggleButton.innerHTML = '<img src="/img/accessibility-vo.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
+    toggleButton.innerHTML = '<img src="https://iaccessabilityservices.com/img/accessibility-vo.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
     Object.assign(toggleButton.style, {
         position: "fixed",
         bottom: "20px",

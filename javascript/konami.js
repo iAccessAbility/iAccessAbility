@@ -12,7 +12,7 @@
         iconContainer.setAttribute("role", "button");
         iconContainer.setAttribute("aria-label", "Game Controller");
         iconContainer.setAttribute("tabindex", "0");
-        iconContainer.innerHTML = '<img src="/img/game-controller.svg" alt="" aria-hidden="true" style="width: 30px; height: 30px; display: block; margin: 0; padding: 0; box-sizing: border-box; filter: invert();">';
+        iconContainer.innerHTML = '<img src="https://iaccessabilityservices.com/img/game-controller.svg" alt="" aria-hidden="true" style="width: 30px; height: 30px; display: block; margin: 0; padding: 0; box-sizing: border-box; filter: invert();">';
         // Hint Bubble
         const hintBubble = document.createElement("div");
         hintBubble.id = "hint-bubble";
