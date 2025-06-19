@@ -6,3 +6,16 @@
   "background_color": "#000",
   "theme_color": "111"
 }
+
+"icons": [
+  {
+    "src": "https://iaccessabilityservices.com/img/favicon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "https://iaccessabilityservices.com/img/favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
