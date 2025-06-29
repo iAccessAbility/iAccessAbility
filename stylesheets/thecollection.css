@@ -83,6 +83,50 @@
         transition: all 200ms ease;
     }
 
+    .text {
+        position: relative;
+        transition: height 0.4s ease;
+        overflow: hidden;
+    }
+
+    .text p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    .text .default-text {
+        opacity: 1;
+        margin: 0 auto;
+        width: 200px;
+        pointer-events: auto;
+    }
+
+    .text .hover-text {
+        opacity: 0;
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    /* On hover/focus: swap content */
+    .device:hover .default-text,
+    .device:focus-within .default-text {
+        opacity: 0;
+    }
+
+    .device:hover .hover-text,
+    .device:focus-within .hover-text {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     img.banner {
         width: 100%;
         max-width: 920px;
@@ -90,6 +134,12 @@
         padding: 10px;
         border: solid 2px #8bc3ff55;
         border-radius: 8px;
+    }
+
+    img.device-img {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 250px;
     }
 
     img {
@@ -255,12 +305,62 @@
         transition: all 200ms ease;
     }
 
+    .text {
+        position: relative;
+        transition: height 0.4s ease;
+        overflow: hidden;
+    }
+
+    .text p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    .text .default-text {
+        opacity: 1;
+        margin: 0 auto;
+        width: 200px;
+        pointer-events: auto;
+    }
+
+    .text .hover-text {
+        opacity: 0;
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    /* On hover/focus: swap content */
+    .device:hover .default-text,
+    .device:focus-within .default-text {
+        opacity: 0;
+    }
+
+    .device:hover .hover-text,
+    .device:focus-within .hover-text {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     img.banner {
         max-width: 920px;
         background-color: #eee;
         padding: 10px;
         border: solid 2px #8bc3ff55;
         border-radius: 8px;
+    }
+
+    img.device-img {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 250px;
     }
 
     img {
