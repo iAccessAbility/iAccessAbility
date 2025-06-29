@@ -203,6 +203,10 @@
         footer {
             width: 70%;
         }
+
+        h4 {
+            border: none;
+        }
     }
 }
 
@@ -399,6 +403,10 @@
         p.site-description,
         footer {
             width: 70%;
+        }
+
+        h4 {
+            border: none;
         }
     }
 }
