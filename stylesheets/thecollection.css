@@ -41,26 +41,27 @@
 
     h4 {
         margin: auto;
-        margin-bottom: 7px;
         width: 200px;
-        padding-bottom: 5px;
-        border-bottom: solid 2px #666;
+        padding-bottom: 0;
+        transition: all 200ms ease;
     }
 
-    p.site-description {
+    p {
+        border-top: 2px solid #666;
+        padding-top: 10px;
+    }
+
+
+    footer p {
+        border: none;
+    }
+
+    p.site-description,
+    footer {
         background-color: #222;
         margin: auto;
         margin-bottom: 8px;
         padding: 6px;
-        width: 920px;
-        border: solid 2px #8bc3ff55;
-        border-radius: 8px;
-    }
-
-    footer {
-        background-color: #222;
-        margin: 10px auto;
-        padding: 5px;
         width: 920px;
         border: solid 2px #8bc3ff55;
         border-radius: 8px;
@@ -83,48 +84,24 @@
         transition: all 200ms ease;
     }
 
-    .text {
-        position: relative;
-        transition: height 0.4s ease;
+    .device .details {
+        margin: auto;
+        opacity: 0;
+        max-height: 0;
         overflow: hidden;
-    }
-
-    .text p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-    }
-
-    .text .default-text {
-        opacity: 1;
-        margin: 0 auto;
         width: 200px;
-        pointer-events: auto;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
     }
 
-    .text .hover-text {
-        opacity: 0;
-        margin: 0 auto;
-        width: 200px;
-    }
-
-    /* On hover/focus: swap content */
-    .device:hover .default-text,
-    .device:focus-within .default-text {
-        opacity: 0;
-    }
-
-    .device:hover .hover-text,
-    .device:focus-within .hover-text {
+    .device:hover .details,
+    .device:focus-within .details {
         opacity: 1;
-        pointer-events: auto;
+        z-index: 2;
+    }
+
+    .device:hover h4,
+    .device:focus h4 {
+        padding-bottom: 10px;
     }
 
     img.banner {
@@ -272,10 +249,14 @@
 
     h4 {
         margin: auto;
-        margin-bottom: 7px;
         width: 200px;
-        padding-bottom: 5px;
-        border-bottom: solid 2px #ccc;
+        padding-bottom: 0;
+        transition: all 200ms ease;
+    }
+
+    p {
+        border-top: 2px solid #ccc;
+        padding-top: 10px;
     }
 
     p.site-description,
@@ -305,48 +286,24 @@
         transition: all 200ms ease;
     }
 
-    .text {
-        position: relative;
-        transition: height 0.4s ease;
+    .device .details {
+        margin: auto;
+        opacity: 0;
+        max-height: 0;
         overflow: hidden;
-    }
-
-    .text p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-    }
-
-    .text .default-text {
-        opacity: 1;
-        margin: 0 auto;
         width: 200px;
-        pointer-events: auto;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
     }
 
-    .text .hover-text {
-        opacity: 0;
-        margin: 0 auto;
-        width: 200px;
-    }
-
-    /* On hover/focus: swap content */
-    .device:hover .default-text,
-    .device:focus-within .default-text {
-        opacity: 0;
-    }
-
-    .device:hover .hover-text,
-    .device:focus-within .hover-text {
+    .device:hover .details,
+    .device:focus-within .details {
         opacity: 1;
-        pointer-events: auto;
+        z-index: 2;
+    }
+
+    .device:hover h4,
+    .device:focus h4 {
+        padding-bottom: 10px;
     }
 
     img.banner {
