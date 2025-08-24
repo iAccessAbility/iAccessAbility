@@ -53,6 +53,18 @@ const questions = [
         options: ["Apple", "Microsoft", "IBM", "Kurzweil"],
         correct: [3],
         fact: "Kurzweil created the first screen reader, a breakthrough in assistive technology for blind people in the 1970s."
+    },
+    {
+        question: "Which computer operating system is superior?",
+        options: ["Windows", "macOS", "Linux"],
+        correct: [0, 1, 2],
+        fact: "All three operating systems have their stong suits. While Engineers, gamers, programers, and businesses generally prefer Windows, macOS is generally prefered by those in the arts such as artists (both music and graphic designers), and content creators, and Linux is generally prefered by those who are strongly tech savvy, programmers, and desire the freedom of customization."
+    },
+    {
+        question: "Which mobile operating system is superior?",
+        options: ["iOS", "Android"],
+        correct: [0, 1],
+        fact: "Both iOS and Android have their strong suits and it boils down to personal preference as to which is superior for each person. :)"
     }
 ];
 let currentQuestionIndex = 0;
