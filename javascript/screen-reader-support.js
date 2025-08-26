@@ -71,7 +71,7 @@
     toggleButton.innerHTML = '<img src="https://iaccessabilityservices.com/img/accessibility-vo.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
     Object.assign(toggleButton.style, {
         position: "fixed",
-        bottom: "20px",
+        bottom: "80px",
         left: "20px",
         width: "50px",
         height: "50px",
@@ -87,11 +87,11 @@
     });
     const style = document.createElement("style");
     style.innerHTML = `
-        @media (hover: hover) {
-            #tabindex-toggle {
-                transition: all 200ms ease;
-            }
+        #tabindex-toggle {
+            transition: all 200ms ease;
+        }
 
+        @media (hover: hover) {
             #tabindex-toggle:hover,
             #tabindex-toggle:focus {
                 scale: 1.2;

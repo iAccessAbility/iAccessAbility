@@ -3,3 +3,15 @@
     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url(../fonts/OpenDyslexic/OpenDyslexic3-Regular.ttf) format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenDyslexicBold";
+    src: url(../fonts/OpenDyslexic/OpenDyslexic3-Bold.ttf) format("truetype");
+    font-display: swap;
+}

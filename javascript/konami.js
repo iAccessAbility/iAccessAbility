@@ -319,11 +319,11 @@
                     width: 70%;
                 }
                 #konami-icon {
-                    bottom: 80px;
+                    bottom: 140px;
                     left: 20px;
                 }
                 #hint-bubble {
-                    bottom: 79px;
+                    bottom: 139px;
                     left: 80px;
                 }
             }
