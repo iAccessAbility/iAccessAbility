@@ -136,6 +136,7 @@ const FILES_TO_CACHE = [
   'https://support.iaccessabilityservices.com/media/videos/install-text-tone-google-pixel.mp4',
   'https://support.iaccessabilityservices.com/articles.json',
   'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2',
+  'https://iaccessabilityservices.com/img/dys.svg',
   'https://iaccessabilityservices.com/javascript/dyslexic.js',
   'https://iaccessabilityservices.com/stylesheets/fonts.css'
 ];
