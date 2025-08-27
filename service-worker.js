@@ -133,7 +133,11 @@ const FILES_TO_CACHE = [
   'https://support.iaccessabilityservices.com/media/images/pixel-color-inversion-light.PNG',
   'https://support.iaccessabilityservices.com/media/images/galaxy-edit-quick-settings-dark.jpg',
   'https://support.iaccessabilityservices.com/media/videos/install-ringtone-google-pixel.mp4',
-  'https://support.iaccessabilityservices.com/media/videos/install-text-tone-google-pixel.mp4'
+  'https://support.iaccessabilityservices.com/media/videos/install-text-tone-google-pixel.mp4',
+  'https://support.iaccessabilityservices.com/articles.json',
+  'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2',
+  'https://iaccessabilityservices.com/javascript/dyslexic.js',
+  'https://iaccessabilityservices.com/stylesheets/fonts.css'
 ];
 
 // Install and cache files
