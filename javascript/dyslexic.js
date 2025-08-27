@@ -13,7 +13,7 @@
             left: 20px;
             width: 50px;
             height: 50px;
-            padding-left: 4px;
+            padding-top: 3px;
             background: rgba(30, 50, 200, 0.8);
             backdrop-filter: blur(2px);
             border: none;
