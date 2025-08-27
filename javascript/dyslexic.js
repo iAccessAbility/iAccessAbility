@@ -1,7 +1,7 @@
 (function() {
     const style = document.createElement("style");
     style.innerHTML = `
-        @import "/stylesheets/fonts.css";
+        @import "https://iaccessabilityservices.com/stylesheets/fonts.css";
         body.dyslexia-mode * {
             font-family: "OpenDyslexic" !important;
             line-height: 1.5;
@@ -41,7 +41,7 @@
     // --- 3. Create toggle button ---
     const btn = document.createElement("button");
     btn.id = "toggle-dyslexic";
-    btn.innerHTML = '<img src="/img/dys.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
+    btn.innerHTML = '<img src="https://iaccessabilityservices.com/img/dys.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
     btn.setAttribute("aria-pressed", "false");
     btn.setAttribute("aria-label", "Toggle OpenDyslexic font");
     // --- 4. Add button to body ---

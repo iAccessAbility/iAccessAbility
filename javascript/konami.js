@@ -268,7 +268,7 @@
             #konami-icon {
                 position: fixed;
                 bottom: 20px;
-                left: 80px;
+                right: 20px;
                 width: 50px;
                 height: 50px;
                 background-color: rgba(30, 50, 200, 0.8);
@@ -286,17 +286,19 @@
             #hint-bubble {
                 position: fixed;
                 bottom: 20px;
-                left: 140px;
+                right: 90px;
                 background-color: rgba(30, 50, 200, 0.8);
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
                 color: #fff;
                 padding: 10px;
+                padding-right: 20px;
                 font-size: 14px;
+                text-align: right;
                 border-radius: 10px;
                 max-width: 200px;
                 transform: scaleX(0);
-                transform-origin: left;
+                transform-origin: right;
                 transition: transform 0.3s ease-in-out;
                 z-index: 999;
                 pointer-events: none;
@@ -319,12 +321,12 @@
                     width: 70%;
                 }
                 #konami-icon {
-                    bottom: 140px;
-                    left: 20px;
+                    bottom: 20px;
+                    right: 20px;
                 }
                 #hint-bubble {
-                    bottom: 139px;
-                    left: 80px;
+                    bottom: 19px;
+                    right: 80px;
                 }
             }
             @media (prefers-contrast: more) {
