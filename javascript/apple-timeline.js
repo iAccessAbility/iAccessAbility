@@ -49,10 +49,11 @@ function loadSheet(sheetURL, category) {
                 const card = document.createElement("div");
                 card.className = `timeline-card ${category}`;
                 card.innerHTML = `
+                    ${item.Image ? `<img src="${item.Image}" alt="${displayNames} ${item.Model}">` : ""}
                     ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model}</h2>` : ""}
                     <hr>
-                    ${item.Image ? `<img src="${item.Image}" alt="${displayNames} ${item.Model}">` : ""}
                     <h3>${item.Tagline || ""}</h3>
+                    <hr>
                     ${item["Initial Price"] ? `<p><strong>Retail Price:</strong> ${item["Initial Price"]}</p>` : ""}
                     ${item.Capacity ? `<p><strong>Capacity:</strong> ${item.Capacity}</p>` : ""}
                     ${item.Processor ? `<p><strong>Chipset:</strong> ${item.Processor}</p>` : ""}
@@ -65,6 +66,7 @@ function loadSheet(sheetURL, category) {
                     ${item["Battery mAh Capacity"] ? `<p><strong>Battery:</strong> ${item["Battery mAh Capacity"]}</p>` : ""}
                 `;
                 timeline.appendChild(card);
+                formatCategoryDeviceLines(card);
             });
             if (currentCategory) {
                 const elements = document.getElementsByClassName(currentCategory);
@@ -74,6 +76,34 @@ function loadSheet(sheetURL, category) {
         error: function(err) {
             console.error(`Error loading ${category} sheet:`, err);
         }
+    });
+}
+function formatCategoryDeviceLines(container) {
+    const paragraphs = container.querySelectorAll("p");
+    paragraphs.forEach(p => {
+        if (p.classList.contains("split-center")) return;
+        const strong = p.querySelector("strong");
+        if (!strong) return;
+        const strongText = strong.textContent.trim();
+        if (!/:$/.test(strongText)) return;
+        const deviceText = p.textContent.replace(strongText, "").trim();
+        if (!deviceText) return;
+        p.innerHTML = "";
+        p.classList.add("split-center");
+        const left = document.createElement("span");
+        left.className = "left";
+        const leftStrong = document.createElement("strong");
+        leftStrong.textContent = strongText.replace(/:$/, "");
+        left.appendChild(leftStrong);
+        const divider = document.createElement("span");
+        divider.className = "divider";
+        divider.textContent = "";
+        const right = document.createElement("span");
+        right.className = "right";
+        right.textContent = deviceText;
+        p.appendChild(left);
+        p.appendChild(divider);
+        p.appendChild(right);
     });
 }
 function refreshAllSheets() {

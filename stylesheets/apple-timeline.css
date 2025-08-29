@@ -1,5 +1,4 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
 }
 
@@ -19,6 +18,27 @@ hr {
     margin-bottom: 10px;
     width: 150px;
     opacity: 20%;
+}
+
+.timeline-card p.split-center {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 3px;
+}
+
+.timeline-card p.split-center .left {
+    justify-self: end;
+    text-align: right;
+}
+
+.timeline-card p.split-center .divider {
+    justify-self: center;
+}
+
+.timeline-card p.split-center .right {
+    justify-self: start;
+    text-align: left;
 }
 
 .buttons {
@@ -45,7 +65,6 @@ hr {
     margin: auto;
     overflow-x: auto;
     padding: 20px;
-    gap: 20px;
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
@@ -55,7 +74,7 @@ hr {
     flex: 0 0 250px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 16px;
     max-width: 500px;
     text-align: center;
@@ -109,7 +128,7 @@ hr {
 @media (max-width: 768px) {
     .timeline-card {
         flex: 0 0 350px;
-        margin: auto;
+        margin: 20px auto;
         width: 100%;
     }
 }
