@@ -38,22 +38,18 @@
         }
     `;
     document.head.appendChild(style);
-    // --- 3. Create toggle button ---
     const btn = document.createElement("button");
     btn.id = "toggle-dyslexic";
     btn.innerHTML = '<img src="https://iaccessabilityservices.com/img/dys.svg" alt="" aria-hidden="true" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0; box-sizing: border-box;">';
     btn.setAttribute("aria-pressed", "false");
     btn.setAttribute("aria-label", "Toggle OpenDyslexic font");
-    // --- 4. Add button to body ---
     window.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(btn);
-        // Restore saved state
         if (localStorage.getItem("dyslexiaMode") === "on") {
             document.body.classList.add("dyslexia-mode");
             btn.setAttribute("aria-pressed", "true");
         }
     });
-    // --- 5. Toggle behavior ---
     btn.addEventListener("click", () => {
         const isActive = document.body.classList.toggle("dyslexia-mode");
         btn.setAttribute("aria-pressed", isActive);
