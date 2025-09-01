@@ -38,13 +38,24 @@ function loadSheet(sheetURL, category) {
         skipEmptyLines: true,
         beforeFirstChunk: function(chunk) {
             var rows = chunk.split("\n");
+            const lastUpdatedRaw = rows[0].split(",")[0];
+            window.lastUpdated = lastUpdatedRaw.replace("Updated: ", "").trim();
             rows.shift();
             return rows.join("\n");
         },
         complete: function(results) {
+            const site = document.querySelector("main.site");
             const timeline = document.getElementById("timeline");
             const oldCards = document.querySelectorAll(`.timeline-card.${category}`);
             oldCards.forEach(card => card.remove());
+            const oldFooter = document.querySelector(`.last-updated.${category}`);
+            if (oldFooter) oldFooter.remove();
+            let lastUpdated = "";
+            if (results.data.length > 0) {
+                const firstRow = results.data[0];
+                const firstCellKey = Object.keys(firstRow)[0];
+                lastUpdated = firstRow[firstCellKey];
+            }
             results.data.forEach(item => {
                 const card = document.createElement("div");
                 card.className = `timeline-card ${category}`;
@@ -68,6 +79,18 @@ function loadSheet(sheetURL, category) {
                 timeline.appendChild(card);
                 formatCategoryDeviceLines(card);
             });
+            if (lastUpdated) {
+                const footer = document.createElement("footer");
+                let parts = window.lastUpdated.split("/");
+                let year = parseInt(parts[2], 10);
+                let formattedDate = new Date(year, parseInt(parts[0], 10)-1, parseInt(parts[1], 10));
+                if (year < 100) year += 2000;
+                footer.id = "footer";
+                footer.className = `last-updated ${category}`;
+                footer.style.whiteSpace = "pre-wrap";
+                footer.textContent = "Last Updated: " + formattedDate.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + "\n" + "Content Provided by Mactracker";
+                site.appendChild(footer);
+            }
             if (currentCategory) {
                 const elements = document.getElementsByClassName(currentCategory);
                 for (let el of elements) el.style.display = "block";
