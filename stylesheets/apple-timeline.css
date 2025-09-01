@@ -79,6 +79,7 @@ hr {
     max-width: 500px;
     text-align: center;
     transition: all 200ms ease;
+    z-index: 2;
 }
 
 .timeline-card h2 {
@@ -120,18 +121,33 @@ hr {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 250px;
     text-align: center;
+    pointer-events: none;
+    z-index: -1;
+}
+
+a.links {
+    color: #8bc3ff;
+    text-decoration: none;
+    transition: all 200ms ease;
+    pointer-events: auto;
 }
 
 @media (hover: hover) {
     .timeline-card:hover,
     .timeline-card:focus {
-        transform: scale(1.1);
+        transform: scale(1.03);
     }
 
     .button:hover,
     .button:focus {
         background-color: #0063cc;
         transform: scale(1.1);
+    }
+
+    a.links:hover,
+    a.links:focus {
+        color: #0063cc;
+        transform: scale(1.4);
     }
 }
 
@@ -140,6 +156,12 @@ hr {
         flex: 0 0 350px;
         margin: auto;
         width: 100%;
+    }
+
+    #footer {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        max-width: 350px;
     }
 }
 

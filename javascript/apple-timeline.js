@@ -83,12 +83,14 @@ function loadSheet(sheetURL, category) {
                 const footer = document.createElement("footer");
                 let parts = window.lastUpdated.split("/");
                 let year = parseInt(parts[2], 10);
-                let formattedDate = new Date(year, parseInt(parts[0], 10)-1, parseInt(parts[1], 10));
                 if (year < 100) year += 2000;
+                let month = parseInt(parts[0], 10) - 1;
+                let day = parseInt(parts[1], 10);
+                let formattedDate = new Date(year, month, day);
                 footer.id = "footer";
                 footer.className = `last-updated ${category}`;
                 footer.style.whiteSpace = "pre-wrap";
-                footer.textContent = "Last Updated: " + formattedDate.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + "\n" + "Content Provided by Mactracker";
+                footer.innerHTML = "Last Updated: " + formattedDate.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + "<br>Content Provided by Mactracker, the Apple Website, Wikipedia, and other sources. " + '<br>Report any incorrect entries at <a class="links" href="mailto:report@iaccessabilityservice.com">report@iaccessabilityservice.com</a>';
                 site.appendChild(footer);
             }
             if (currentCategory) {
