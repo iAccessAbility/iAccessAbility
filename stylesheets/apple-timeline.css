@@ -73,6 +73,7 @@ hr {
 .timeline-card {
     flex: 0 0 250px;
     border-radius: 8px;
+    border: solid 2px transparent;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     padding: 16px;
@@ -109,7 +110,8 @@ hr {
 .AppleWatch,
 .AirPods,
 .AppleTV,
-.HomePod {
+.HomePod,
+.iPod {
     display: none;
 }
 
@@ -135,6 +137,8 @@ a.links {
 @media (hover: hover) {
     .timeline-card:hover,
     .timeline-card:focus {
+        border: solid 2px #4da3ff;
+        box-shadow: 0 4px 10px rgba(139, 195, 255, 0.7);
         transform: scale(1.03);
     }
 
@@ -181,6 +185,13 @@ a.links {
     .timeline-card,
     #footer {
         background: #222;
+    }
+
+    @media (hover: hover) {
+        .timeline-card:hover,
+        .timeline-card:focus {
+            box-shadow: 0 4px 10px rgba(139, 195, 255, 0.3);
+        }
     }
 }
 

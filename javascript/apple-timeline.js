@@ -1,4 +1,4 @@
-const toggleGroups = ["iPhone", "iPad", "AppleWatch", "AirPods", "AppleTV", "HomePod"];
+const toggleGroups = ["iPhone", "iPad", "AppleWatch", "AirPods", "AppleTV", "HomePod", "iPod"];
 let currentCategory = null;
 function toggleCategory(category) {
     currentCategory = category;
@@ -15,13 +15,15 @@ function AppleWatchToggle() { toggleCategory("AppleWatch"); }
 function AirPodsToggle() { toggleCategory("AirPods"); }
 function AppleTVToggle() { toggleCategory("AppleTV"); }
 function HomePodToggle() { toggleCategory("HomePod"); }
+function iPodToggle() { toggleCategory("iPod"); }
 const sheets = {
     iPhone: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=0&single=true&output=csv",
     iPad: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=1306517710&single=true&output=csv",
     AppleWatch: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=2104347561&single=true&output=csv",
     AirPods: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=874084650&single=true&output=csv",
     AppleTV: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=1636405451&single=true&output=csv",
-    HomePod: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=1529167604&single=true&output=csv"
+    HomePod: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=1529167604&single=true&output=csv",
+    iPod: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsN6jKf07-m0JMknDST6FgnmepD9DX6I4G06PD-E3JRVSlJa50eeHJ0YC7056hMlIsM_qWMsxhPMId/pub?gid=1431522260&single=true&output=csv"
 };
 const displayNames = {
     iPhone: "iPhone",
@@ -29,7 +31,8 @@ const displayNames = {
     AppleWatch: "Apple Watch",
     AirPods: "AirPods",
     AppleTV: "Apple TV",
-    HomePod: "HomePod"
+    HomePod: "HomePod",
+    iPod: "iPod"
 };
 function loadSheet(sheetURL, category) {
     Papa.parse(sheetURL, {
@@ -57,24 +60,43 @@ function loadSheet(sheetURL, category) {
                 lastUpdated = firstRow[firstCellKey];
             }
             results.data.forEach(item => {
+                for (let key in item) {
+                    if (key === "Discontinued" && item[key] && item[key].toUpperCase() === "N/A") {
+                        item[key] = "(Current)";
+                    }
+                    if (item[key] && key !== "Initial Price" && key !== "Image" && key !== "iOS" && key !== "watchOS" && key !== "tvOS" && key !== "Software Version" && key !== "Architecture" && key !== "Model Identifier" && key !== "Display Size" && key !== "Operating System" && key !== "Released" && key !== "Discontinued") {
+                        item[key] = item[key].replace(/[\/\-,]/g, "");
+                    }
+                    if (/^(N\/A|None)$/i.test(item[key])) {
+                        item[key] = "";
+                    }
+                }
                 const card = document.createElement("div");
                 card.className = `timeline-card ${category}`;
                 card.innerHTML = `
                     ${item.Image ? `<img src="${item.Image}" alt="${displayNames} ${item.Model}">` : ""}
-                    ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model}</h2>` : ""}
+                    ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model} (${item["Model Numbers"]})</h2>` : ""}
                     <hr>
                     <h3>${item.Tagline || ""}</h3>
                     <hr>
                     ${item["Initial Price"] ? `<p><strong>Retail Price:</strong> ${item["Initial Price"]}</p>` : ""}
                     ${item.Capacity ? `<p><strong>Capacity:</strong> ${item.Capacity}</p>` : ""}
+                    ${item.Released || item.Discontinued ? `<p><strong>Dates:</strong> ${item.Released ? item.Released : ""}${item.Released && item.Discontinued ? " - " : ""}${item.Discontinued ? item.Discontinued : ""}</p>` : ""}
                     ${item.Processor ? `<p><strong>Chipset:</strong> ${item.Processor}</p>` : ""}
-                    ${item.Colors ? `<p><strong>Color:</strong> ${item.Colors}</p>` : ""}
+                    ${item.RAM ? `<p><strong>RAM:</strong> ${item.RAM}</p>` : ""}
+                    ${item.Architecture ? `<p><strong>Architecture:</strong> ${item.Architecture}</p>` : ""}
+                    ${item["Operating System"] ? `<p><strong>Operating System:</strong> ${item["Operating System"]}</p>` : ""}
                     ${item.iOS ? `<p><strong>iOS:</strong> ${item.iOS}</p>` : ""}
                     ${item.watchOS ? `<p><strong>watchOS:</strong> ${item.watchOS}</p>` : ""}
                     ${item.tvOS ? `<p><strong>tvOS:</strong> ${item.tvOS}</p>` : ""}
                     ${item["Software Version"] ? `<p><strong>Software Version:</strong> ${item["Software Version"]}</p>` : ""}
-                    ${item["Display Type"] ? `<p><strong>Display:</strong> ${item["Display Type"]}</p>` : ""}
+                    ${item.Colors ? `<p><strong>Color:</strong> ${item.Colors}</p>` : ""}
+                    ${item["Display Type"] ? `<p><strong>Display Type:</strong> ${item["Display Type"]}</p>` : ""}
+                    ${item["Display Size"] ? `<p><strong>Display Size:</strong> ${item["Display Size"]}</p>` : ""}
+                    ${item["Rear Camera Specs"] || item["Front Camera Specs"] ? `<p><strong>Camera Specs:</strong> ${item["Rear Camera Specs"] ? item["Rear Camera Specs"] : ""}${item["Rear Camera Specs"] && item["Front Camera Specs"] ? " / " : ""}${item["Front Camera Specs"] ? item["Front Camera Specs"] : ""}</p>` : ""}
+                    ${item["Headphone Jack"] ? `<p><strong>Headphone Jack:</strong> ${item["Headphone Jack"]}</p>` : ""}
                     ${item["Battery mAh Capacity"] ? `<p><strong>Battery:</strong> ${item["Battery mAh Capacity"]}</p>` : ""}
+                    ${item["Model Identifier"] ? `<p><strong>Model Identifier:</strong> ${item["Model Identifier"]}</p>` : ""}
                 `;
                 timeline.appendChild(card);
                 formatCategoryDeviceLines(card);
