@@ -54,6 +54,7 @@ function loadSheet(sheetURL, category) {
             const oldFooter = document.querySelector(`.last-updated.${category}`);
             if (oldFooter) oldFooter.remove();
             let lastUpdated = "";
+            let discontinued = "";
             if (results.data.length > 0) {
                 const firstRow = results.data[0];
                 const firstCellKey = Object.keys(firstRow)[0];
@@ -69,6 +70,17 @@ function loadSheet(sheetURL, category) {
                     }
                     if (/^(N\/A|None)$/i.test(item[key])) {
                         item[key] = "";
+                    }
+                    if (key === "Released" || key === "Discontinued") {
+                        const dateParts = item[key].split(/[-\/]/);
+                        if (dateParts.length === 3) {
+                            let month = parseInt(dateParts[0], 10) - 1;
+                            let day = parseInt(dateParts[1], 10);
+                            let year = parseInt(dateParts[2], 10);
+                            if (year < 100) year += 2000;
+                            const dateObj = new Date(year, month, day);
+                            item[key] = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+                        }
                     }
                 }
                 const card = document.createElement("div");
