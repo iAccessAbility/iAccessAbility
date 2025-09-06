@@ -66,7 +66,7 @@ function loadSheet(sheetURL, category) {
                     if (key === "Discontinued" && item[key] && item[key].toUpperCase() === "N/A") {
                         item[key] = "(Current)";
                     }
-                    if (item[key] && key !== "Initial Price" && key !== "Image" && key !== "iOS" && key !== "watchOS" && key !== "tvOS" && key !== "Software Version" && key !== "Architecture" && key !== "Model Identifier" && key !== "Display Size" && key !== "Operating System" && key !== "Released" && key !== "Discontinued") {
+                    if (item[key] && key !== "Model" && key !== "Initial Price" && key !== "Image" && key !== "iOS" && key !== "watchOS" && key !== "tvOS" && key !== "Software Version" && key !== "Architecture" && key !== "Model Identifier" && key !== "Display Size" && key !== "Operating System" && key !== "Released" && key !== "Discontinued") {
                         item[key] = item[key].replace(/[\/\-,]/g, "");
                     }
                     if (/^(N\/A|None)$/i.test(item[key])) {
