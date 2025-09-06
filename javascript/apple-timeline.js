@@ -55,6 +55,7 @@ function loadSheet(sheetURL, category) {
             if (oldFooter) oldFooter.remove();
             let lastUpdated = "";
             let discontinued = "";
+            let imagesHTML = "";
             if (results.data.length > 0) {
                 const firstRow = results.data[0];
                 const firstCellKey = Object.keys(firstRow)[0];
@@ -82,11 +83,18 @@ function loadSheet(sheetURL, category) {
                             item[key] = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
                         }
                     }
+                    if (item.Image) {
+                        const imageLinks = item.Image.split(/\s+/).filter(link => link.trim() !== "");
+                        /* jshint -W083 */
+                        imagesHTML = imageLinks.map(link =>
+                            `<img src="${link}" alt="${displayNames[category]} ${item.Model}">`
+                        ).join("");
+                    }
                 }
                 const card = document.createElement("div");
                 card.className = `timeline-card ${category}`;
                 card.innerHTML = `
-                    ${item.Image ? `<img src="${item.Image}" alt="${displayNames} ${item.Model}">` : ""}
+                    ${imagesHTML}
                     ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model} (${item["Model Numbers"]})</h2>` : ""}
                     <hr>
                     <h3>${item.Tagline || ""}</h3>
