@@ -94,9 +94,8 @@ function loadSheet(sheetURL, category) {
                 const card = document.createElement("div");
                 card.className = `timeline-card ${category}`;
                 card.innerHTML = `
-                    ${imagesHTML}
-                    ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model} (${item["Model Numbers"]})</h2>` : ""}
-                    <hr>
+                    <div class="images">${imagesHTML}</div>
+                    ${item.Model ? `<h2><strong>${displayNames[category]}</strong> ${item.Model}</h2>` : ""}
                     <h3>${item.Tagline || ""}</h3>
                     <hr>
                     ${item["Initial Price"] ? `<p><strong>Retail Price:</strong> ${item["Initial Price"]}</p>` : ""}
@@ -117,6 +116,7 @@ function loadSheet(sheetURL, category) {
                     ${item["Headphone Jack"] ? `<p><strong>Headphone Jack:</strong> ${item["Headphone Jack"]}</p>` : ""}
                     ${item["Battery mAh Capacity"] ? `<p><strong>Battery:</strong> ${item["Battery mAh Capacity"]}</p>` : ""}
                     ${item["Model Identifier"] ? `<p><strong>Model Identifier:</strong> ${item["Model Identifier"]}</p>` : ""}
+                    ${item["Model Numbers"] ? `<p><strong>Model Numbers:</strong>${item["Model Numbers"]}</p>` : ""}
                 `;
                 timeline.appendChild(card);
                 formatCategoryDeviceLines(card);
