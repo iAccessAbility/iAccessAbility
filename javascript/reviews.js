@@ -1,5 +1,4 @@
 const reviewsSheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTSFojLFUKYoMzHyVgkbBxMyVjOY1n4vDwwmMt1ro_s2iBO_ty1jXFiuBh2N9rMhiTEI_4Q2PkQTX2B/pub?gid=1624005337&single=true&output=csv";
-
 function loadReviews() {
     Papa.parse(reviewsSheetURL, {
         download: true,
