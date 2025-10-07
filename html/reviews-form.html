@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Leah Dykema">
+        <meta name="description" content="Submit a Review of iAccessAbility services.">
+        <meta name="theme-color" content="#eee" id="theme-color-meta">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" name="image" content="https://iaccessabilityservices.com/img/favicon.png">
+        <meta property="og:title" content="Submit a Review - iAccessAbility">
+        <meta property="og:description" content="Submit a Review of iAccessAbility services.">
+        <meta property="og:url" content="https://support.iaccessabilityservices.com/html/service-form.html">
+        <meta property="og:type" content="website">
+        <link rel="shortcut icon" type="image/x-icon" href="https://support.iaccessabilityservices.com/media/favicon.ico">
+        <link rel="apple-touch-icon" type="image/x-icon" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="https://support.iaccessabilityservices.com/media/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="https://support.iaccessabilityservices.com/media/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://support.iaccessabilityservices.com/media/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://support.iaccessabilityservices.com/media/favicon.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="https://support.iaccessabilityservices.com/media/favicon.png">
+        <title>Submit a Review - iAccessAbility</title>
+        <link rel="stylesheet" href="../stylesheets/reviews-form.css">
+        <link rel="stylesheet" href="https://iaccessabilityservices.com/stylesheets/accessibility.css">
+        <link rel="stylesheet" href="https://iaccessabilityservices.com/navbar/navbar.css">
+        <link rel="manifest" href="https://iaccessabilityservices.com/manifest.json">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="nav-container" data-role="header" data-position="fixed">
+            <nav>
+                <!-- Top row: menu button on left, logo on right -->
+                <div class="mobile-header">
+                    <!-- iAccessAbility -->
+                    <div class="logo-container">
+                        <a href="https://iaccessabilityservices.com" aria-label="Home"><img class="link-logo" src="https://iaccessabilityservices.com/img/logo-colored.svg" alt="I Access Ability"></a>
+                        <a href="https://iaccessabilityservices.com" class="links"><h1 class="name" aria-label="I Access Ability">iAccessAbility</h1></a>
+                    </div>
+                    <!-- Mobile Menu Toggle Button -->
+                    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+                        <span class="menu-icon-container">
+                            <span class="menu-line"></span>
+                            <span class="menu-line"></span>
+                        </span>
+                    </button>
+                </div>
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><a href="https://iaccessabilityservices.com"><img class="link-logo" src="https://iaccessabilityservices.com/img/logo-colored.svg" alt="I Access Ability"></a></li>
+                    <li><a href="https://iaccessabilityservices.com/news/">News</a></li>
+                    <li><a href="https://iaccessabilityservices.com/blog/">Blog</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/recommendations.html">Recommendations</a></li>
+                    <li><a href="https://support.iaccessabilityservices.com">Support</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/about.html">About</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/connect.html">Connect</a></li>
+                </ul>
+                <!-- Mobile Navigation (initially hidden) -->
+                <ul id="mobile-menu" class="mobile-nav" aria-hidden="true">
+                    <li><a href="https://iaccessabilityservices.com" tabindex="-1">Home</a></li>
+                    <li><a href="https://iaccessabilityservices.com/news/" tabindex="-1">News</a></li>
+                    <li><a href="https://iaccessabilityservices.com/blog/" tabindex="-1">Blog</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/recommendations.html" tabindex="-1">Recommendations</a></li>
+                    <li><a href="https://support.iaccessabilityservices.com" tabindex="-1">Support</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/about.html" tabindex="-1">About</a></li>
+                    <li><a href="https://iaccessabilityservices.com/html/connect.html" tabindex="-1">Connect</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Services Form -->
+        <main class="site">
+            <h2>Submit a Review</h2>
+            <div class="form">
+                <form id="submitReview">
+                    <div class="form-row">
+                        <label>First Name&#58;</label>
+                        <input type="text" name="First Name" id="firstName" required maxlength="15" placeholder="John" tabindex="0">
+                    </div>
+                    <div class="form-row">
+                        <label>Last Name&#58;</label>
+                        <input type="text" name="Last Name" id="lastName" required maxlength="15" placeholder="Appleseed" tabindex="0">
+                    </div>
+                    <div class="form-row">
+                    <label>Email&#58;</label>
+                        <input type="email" name="Email Address" id="email" required placeholder="john@example.com" tabindex="0">
+                    </div>
+                    <div class="form-row">
+                        <label>Service Type Received&#58;</label>
+                        <select name="Service" id="serviceType" required tabindex="0">
+                            <option selected disabled>Select a Service</option>
+                            <option value="Tech Support" tabindex="0">Tech Support</option>
+                            <option value="Buying Consulting" tabindex="0">Buying Consulting</option>
+                            <option value="One-on-One Training" tabindex="0">One-on-One Training</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Review&#58;</label>
+                        <textarea name="Review" id="review" placeholder="Write your review here... (All text in this field is fully copied and publicly posted on the Honest Reviews page.)" required tabindex="0"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="agree-section">
+                            <label for="agreement" class="agreement">
+                                <input type="checkbox" id="agreement" tabindex="0">
+                                I approve that my review may be publicly shared with my first name&#46; &#40;Not Required&#41;
+                            </label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="timestamp" id="timestamp" aria-hidden="true">
+                    <button class="submit" type="submit" tabindex="3">
+                        Submit Review
+                    </button>
+                </form>
+            </div>
+            <br>
+            <footer>
+                <p class="info">We respect your privacy and will not publicly share your full name and email address&#46; If you have any questions regarding what is shared on our reviews page&#44; please contact us at <a class="links" href="mailto:reviews@iaccessabilityservices.com?subject=Privacy%20Policy%20-%20Reviews%20Page" tabindex="0">reviews&#64;iAccessAbillityServices&#46;com</a>&#46; If you face any technical isues while submitting your review&#44; please report it at <a class="links" href="mailto:report@iaccessabilityservices.com?subject=Reporting%20Issue%20on%20Reviews%20Page" tabindex="0">report&#64;iAccessAbillityServices&#46;com</a></p>
+            </footer>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("submitReview");
+                const submitButton =   form.querySelector("button[type='submit']");
+            });
+        </script>
+        <script>
+            const scriptURL = "https://script.google.com/macros/s/AKfycbwLOa_tkJmGd3_2L8N2PBvIO6QlxJ23bk5pcWhFqkvJqfCAtT7zrSonjSCWLSyyTdTd/exec";
+            document.addEventListener("DOMContentLoaded", () => {
+              const form = document.getElementById("submitReview");
+              const submitButton = form.querySelector('button[type="submit"]');
+              const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+              form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                submitButton.disabled = true;
+                const now = new Date();
+                const optionsTime = { hour: "numeric", minute: "numeric", hour12: true, timeZone: "America/Chicago" };
+                const optionsDate = { month: "numeric", day: "numeric", year: "numeric", timeZone: "America/Chicago" };
+                document.getElementById("timestamp").value =
+                    now.toLocaleTimeString("en-US", optionsTime) + " (CT) " +
+                    now.toLocaleDateString("en-US", optionsDate);
+                const formData = new FormData(form);
+                formData.append("Agreement", document.getElementById("agreement").checked ? "Yes" : "No");
+                const params = new URLSearchParams(formData);
+                fetch(scriptURL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: params
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        if (data.result === "success") {
+                            Swal.fire({
+                                title: "Done",
+                                text: "Review submitted successfully!",
+                                icon: "success",
+                                background: isDark ? "#222" : "#fff",
+                                color: isDark ? "#eee" : "#000",
+                                confirmButtonColor: isDark ? "#4da3ff" : "#0063cc"
+                            });
+                            form.reset();
+                        } else {
+                            throw new Error("Submission failed");
+                        }
+                    })
+                    .catch(() => {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Something went wrong. Please try again! If this issue persists, contact report@iAccessAbilityServices.com.",
+                            icon: "error",
+                            background: isDark ? "#222" : "#fff",
+                            color: isDark ? "#eee" : "#000",
+                            confirmButtonColor: isDark ? "#4da3ff" : "#0063cc"
+                        });
+                        submitButton.disabled = false;
+                    });
+                });
+            });
+        </script>
+        <script src="https://iaccessabilityservices.com/javascript/screen-reader-support.js"></script>
+        <script src="https://iaccessabilityservices.com/javascript/dyslexic.js"></script>
+        <script src="https://iaccessabilityservices.com/navbar/navbar.js"></script>
+        <script src="https://iaccessabilityservices.com/javascript/pwa.js"></script>
+    </body>
+</html>
