@@ -43,7 +43,7 @@ function loadReviews() {
                         </footer>
                     </div>
                 `;
-                container.appendChild(article);
+                container.prepend(article);
             });
         },
         error: function(err) {
