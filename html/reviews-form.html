@@ -158,7 +158,7 @@
                         if (data.result === "success") {
                             Swal.fire({
                                 title: "Done",
-                                text: "Review submitted successfully!",
+                                html: 'Review submitted successfully&#33; View it at <a href="https://iaccessabilityservices.com/reviews/index.html" target="_blank" class="links">iAccessAbility Reviews</a>&#46;',
                                 icon: "success",
                                 background: isDark ? "#222" : "#fff",
                                 color: isDark ? "#eee" : "#000",
@@ -166,7 +166,7 @@
                             });
                             form.reset();
                         } else {
-                            throw new Error("Submission failed");
+                            throw new Error("Submission failed, please try again or report the isssue to report@iaccessabilityservices.com");
                         }
                     })
                     .catch(() => {
