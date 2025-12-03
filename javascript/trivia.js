@@ -7,14 +7,32 @@ const questions = [
         fact: "Steve Jobs, Steve Wozniak, and Ronald Wayne were the three co-founders of the Apple Computers company in 1976. It eventually was shortaned to what we all know today, Apple Inc. and the company has revolutionized personal technology with the iPhone, iPad, MacBook, Apple Watch, and more."
     },
     {
+        question: "Who founded Google?",
+        options: ["Sundar Richai", "Larry Page", "Hiroshi Lockheimer", "Sergey Brin"],
+        correct: [1, 3],
+        fact: "Larry Page and Sergey Brin were the co-founders of Google in 1998. While Sundar Richai and Hiroshi Lockheimer are incorrect answers for this question, they are both Google employees with Sundar being the CEO and Hiroshi being a Senior Vice President of Platforms and Ecosystems."
+    },
+    {
+        question: "Who founded Microsoft?",
+        options: ["Bill Gates", "Satya Nadella", "Steve Ballmer", "Paul Allen"],
+        correct: [0, 3],
+        fact: "Bill Gates and Paul Allen founded the original company Mico-Soft on April 4, 1975; however, today, we know it as Microsoft. Steve Ballmer replaced Bill Gates as the CEO back in 2000 and oversaw the company until 2014 when Satya Nadella took the role and is still the CEO today."
+    },
+    {
+        question: "What was the very first smartphone?",
+        options: ["The Nokia 9000 Communicator", "The iPhone", "The IBM Simon Personal Communicator", "The BlackBerry 850"],
+        correct: [2],
+        fact: "The IBM Simon Personal Communicator is considered the world's first smartphone, released to the public in 1994. It was a groundbreaking device that combined a mobile phone with personal digital assistant (PDA) features, including a monochrome touchscreen, email, calendar, and a notepad. While Nokia's 9000 Communicator wasn't the first smartphone in the world, it was Nokia's first smartphone released in 1996."
+    },
+    {
         question: "What year was the first iPhone released?",
         options: ["2005", "2007", "2009", "2010"],
         correct: [1],
         fact: "The first iPhone was released on June 29, 2007, and revolutionized the smartphone industry."
     },
     {
-        question: "What is VoiceOver in Apple devices?",
-        options: ["A text-to-speech tool for the visually impaired", "A voice recording app", "A sound enhancer for the hearing impaired", "An app for speech-to-text conversion"],
+        question: "What is the VoiceOver feature on Apple devices?",
+        options: ["A text-to-speech tool for the visually impaired and blind", "A voice recording app", "A sound enhancer for the hearing impaired", "An app for speech-to-text conversion"],
         correct: [0],
         fact: "VoiceOver is a built-in screen reader for blind and low-vision users on Apple devices, first introduced in 2005."
     },
