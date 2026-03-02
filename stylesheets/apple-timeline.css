@@ -33,10 +33,12 @@ hr {
 
 .timeline-card p.split-center .left {
     justify-self: end;
+    text-align: right;
 }
 
 .timeline-card p.split-center .divider {
     justify-self: center;
+    text-align: center;
 }
 
 .timeline-card p.split-center .right {
