@@ -68,7 +68,7 @@
     .connect-list {
         display: flex;
         margin: auto;
-        max-width: 300px;
+        max-width: 400px;
         align-items: center;
         justify-content: space-between;
         list-style: none;
