@@ -146,6 +146,18 @@ footer {
         width: 100%;
     }
 
+    div.card-group {
+        display: flex;
+        margin: 0 auto;
+        max-width: 2000px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div.card {
+        max-width: 300px;
+    }
+
     div.title,
     h2,
     hr,
