@@ -73,10 +73,22 @@ const questions = [
         fact: "Kurzweil created the first screen reader, a breakthrough in assistive technology for blind people in the 1970s."
     },
     {
+        question: "What device can help people with severe hearing loss by directly stimulating the auditory nerve?",
+        options: ["Hearing Aid", "Bone Conduction Earbuds", "Cochlear Impant", "FM System"],
+        correct: [2],
+        fact: "Coclear implants is a medical device that has two pieces, one is implanted deep into the ear and the other magnetically attaches to the side of a person's head. They bypass damaged parts of the ear and directly stimulate the auditory nerve, allowing people with severe hearing loss to perceive sound. Hearing aids simply amplify audio and does not bypass damaged parts of the ear, meaning they are most helpful to those who have little hearing loss. Bone conduction earbuds send vibrations through the skull to the inner ear but still rely on the natural parts inside your ear. FM Systems transmit sound directly to a receiver or hearing device such as smart hearing aids. Cochlear implants are medical devices with two parts, one implanted in the inner ear and the other magnetically attached outside the head. This  bypasses damaged parts of the ear and directly stimulate the auditory nerve, allowing people with severe hearing loss to perceive sound. Hearing aids simply amplify sound and do not bypass the ear, so they are most helpful for people with mild to moderate hearing loss. Bone conduction earbuds send vibrations through the skull to the inner ear but still rely on the ear’s natural hearing structures. Frequency Modulation (FM) systems transmit sound directly to a receiver or compatible hearing device, but they do not create hearing on their own."
+    },
+    {
         question: "Which computer operating system is superior?",
         options: ["Windows", "macOS", "Linux"],
         correct: [0, 1, 2],
         fact: "All three operating systems have their stong suits. While Engineers, gamers, programers, and businesses generally prefer Windows, macOS is generally prefered by those in the arts such as artists (both music and graphic designers), and content creators, and Linux is generally prefered by those who are strongly tech savvy, programmers, and desire the freedom of customization."
+    },
+    {
+        question: "Who is Switch Control primarily designed to help?",
+        options: ["People with limited mobility or physical disabilities", "People who are blind or visually impaired", "People who are deaf or hard of hearing", "People who have difficulty speaking"],
+        correct: [0],
+        fact: "Switch Control was introduced 2013 with iOS 7 and allows users with limited mobility to navigate their iPhone, iPad, iPod touch, and Mac using switches, screen taps, or head movements. It was later heavily improved in iOS 13 with mouse emulation functionality."
     },
     {
         question: "Which mobile operating system is superior?",
