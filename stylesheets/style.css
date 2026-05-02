@@ -1,7 +1,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #000;
+        background-color: #0e141a;
     }
 
     .site {
@@ -55,7 +55,7 @@
 /* Light theme */
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #fff;
+        background-color: #8bc3ff;
     }
 
     .site {

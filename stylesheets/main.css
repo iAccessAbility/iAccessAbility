@@ -36,7 +36,7 @@
         max-width: 1000px;
         width: 70%;
         padding: 20px;
-        background-color: #222;
+        background-color: #8bc3ff33;
         border-radius: 20px;
     }
 
@@ -48,7 +48,10 @@
     img.desktop {
         width: 100%;
         height: auto;
-        filter: invert();
+    }
+
+    img.desktop.light {
+        display: none;
     }
 
     /* Hidden */
@@ -95,7 +98,10 @@
             display: block;
             width: 100%;
             height: auto;
-            filter: invert();
+        }
+
+        img.mobile.light {
+            display: none;
         }
 
         /* Hidden */
@@ -141,13 +147,17 @@
         max-width: 1000px;
         width: 70%;
         padding: 20px;
-        background-color: #eee;
+        background-color: #cce5ff;
         border-radius: 20px;
     }
 
     img.desktop {
         width: 100%;
         height: auto;
+    }
+
+    img.desktop.dark {
+        display: none;
     }
 
     /* Hidden */
@@ -194,6 +204,10 @@
             display: block;
             width: 100%;
             height: auto;
+        }
+
+        img.mobile.dark {
+            display: none;
         }
 
         /* Hidden */
