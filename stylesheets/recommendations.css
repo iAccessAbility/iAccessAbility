@@ -13,6 +13,12 @@
         overflow-wrap: break-word;
     }
 
+    .description {
+        margin-left: 20rem;
+        margin-right: 20rem;
+        word-wrap: normal;
+    }
+
     p {
         font-size: 20px;
         overflow-wrap: break-word;
@@ -102,6 +108,12 @@
             margin-left: 1%;
         }
 
+        .description {
+            margin-left: 5rem;
+            margin-right: 5rem;
+            word-wrap: normal;
+        }
+
         div.title {
             width: 700px;
         }
@@ -120,6 +132,12 @@
         .site {
             margin-right: 0;
             margin-left: 0;
+        }
+
+        .description {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            word-wrap: normal;
         }
 
         div.title,
@@ -147,6 +165,12 @@
         text-align: center;
         color: #000;
         overflow-wrap: break-word;
+    }
+
+    .description {
+        margin-left: 20rem;
+        margin-right: 20rem;
+        word-wrap: normal;
     }
 
     p {
@@ -237,6 +261,12 @@
             margin-left: 1%;
         }
 
+        .description {
+            margin-left: 5rem;
+            margin-right: 5rem;
+            word-wrap: normal;
+        }
+
         div.title,
         div.card-group,
         div.info {
@@ -252,6 +282,12 @@
         .site {
             margin-right: 8%;
             margin-left: 8%;
+        }
+
+        .description {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            word-wrap: normal;
         }
 
         div.title,
